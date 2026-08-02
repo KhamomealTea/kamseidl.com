@@ -1,0 +1,60 @@
+/* ============================================================
+   Crucible — Base / Reset
+   The dark "stage": near-black background with the brand bg.svg
+   glow motif, white text, Sohne as the default family.
+   ============================================================ */
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+  background-color: var(--surface-app);
+  background-image: url("../assets/bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbars are hidden across the product */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--white-10);
+  border-radius: 2px;
+}
+
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+/* Utility: the signature 1px blue gradient border (card / input frame) */
+.cr-border-gradient {
+  position: relative;
+  border-radius: var(--radius-md);
+  background: transparent;
+}
+.cr-border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--grad-border-blue);
+  opacity: 0.6;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}

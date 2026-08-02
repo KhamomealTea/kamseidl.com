@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Kam Seidl — Notebook</title>
+<meta name="description" content="Writing on interface design, UX teardowns, and things built off the clock, by Kam Seidl.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kam Seidl — Notebook">
+<meta property="og:description" content="Writing on interface design, UX teardowns, and things built off the clock, by Kam Seidl.">
+<meta property="og:image" content="https://khamomealtea.github.io/kamseidl.com/images/crucible/dashboard-crop.png">
+<meta property="og:url" content="https://khamomealtea.github.io/kamseidl.com/blog.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-style='italic' font-weight='700' fill='%232dd4bf' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/colors.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/typography.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/base.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/styles.css">
+<script src="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/_ds_bundle.js"></script>
+<script src="content/posts.js"></script>
+<style>
+  body {
+    --blue-500: #2dd4bf;
+    --blue-450: #5eead4;
+    --blue-700: #14b8a6;
+    --text-accent: #2dd4bf;
+    --blue-tint-08: rgba(45, 212, 191, 0.10);
+    --blue-tint-12: rgba(94, 234, 212, 0.14);
+    --blue-tint-15: rgba(45, 212, 191, 0.12);
+    --navy-900: #2e1a4d;
+    --navy-800: #4c2a7a;
+    --navy-750: #3b2064;
+    --navy-700: #4c2a7a;
+    --navy-ink: #241c33;
+    --ink-750: #24303a;
+    --grad-border-blue: linear-gradient(45deg, #5d5d5d 0%, #2dd4bf 20%, #a855f7 80%, #5d5d5d 100%);
+    --grad-button-edge: linear-gradient(45deg, #fff 0%, #2dd4bf 30%, #a855f7 70%, #fff 100%);
+    --grad-pill-edge: linear-gradient(160deg, #5d5d5d 0%, #2dd4bf 64%, #494949 100%);
+    --grad-pill-fill: linear-gradient(90deg, #3b2064 0%, #12171c 100%);
+  }
+  body[data-theme="light"] {
+    --ink-950: #ffffff; --ink-900: #f4f5f7; --ink-850: #ffffff; --ink-800: #eef0f3;
+    --ink-750: #e4edf7; --ink-700: #dcdfe4; --ink-600: #8a929c; --ink-500: #b9bfc7;
+    --text-primary: #12171c; --text-secondary: #5b6472; --text-muted: #6d7783; --text-faint: #5b6472;
+    --surface-app: #f5f6f8; --surface-card: #ffffff; --surface-raised: #eef0f3; --surface-input: #ffffff;
+    --border-default: #dcdfe4; --border-subtle: rgba(0,0,0,.10); --border-hairline: rgba(0,0,0,.08);
+    --white-02: rgba(0,0,0,.02); --white-04: rgba(0,0,0,.035); --white-08: rgba(0,0,0,.06);
+    --white-10: rgba(0,0,0,.10); --white-15: rgba(0,0,0,.14); --white-24: rgba(0,0,0,.22);
+    --blue-450: #0f766e; --blue-500: #0f766e; --blue-700: #115e59; --text-accent: #0f766e;
+    --blue-tint-08: rgba(15, 118, 110, 0.08);
+    --blue-tint-12: rgba(15, 118, 110, 0.12);
+    --blue-tint-15: rgba(15, 118, 110, 0.10);
+    color-scheme: light;
+    background-image: none;
+  }
+  body[data-theme="light"] .cr-card,
+  body[data-theme="light"] .cr-badge--default { color: var(--text-primary); }
+  body[data-theme="light"] .cr-btn--outline { color: var(--text-primary); }
+  ::selection { background: var(--blue-500); color: #fff; }
+  .cr-card__body { padding: 0 !important; }
+  .cr-card__body > div:last-child { padding: var(--space-6) !important; }
+  a:hover { color: var(--blue-450); }
+  @media (max-width: 600px) {
+    main { padding-left: 20px !important; padding-right: 20px !important; }
+    header[data-nav] { padding-left: 16px !important; padding-right: 16px !important; height: auto !important; min-height: 72px; padding-top: 12px !important; padding-bottom: 12px !important; flex-wrap: wrap; }
+  }
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--surface-app);color:var(--text-primary);font-family:var(--font-body);font-size:var(--text-sm);line-height:var(--leading-body)">
+
+  <header data-nav="1" style="position:sticky;top:0;z-index:50;height:72px;display:flex;align-items:center;gap:var(--space-5);padding:0 var(--space-6);background:color-mix(in srgb, var(--surface-app) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-hairline)">
+    <a href="index.html" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--text-primary)">
+      <span style="font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.02em;font-size:20px">Kam Seidl</span>
+      <span style="font-size:12px;color:var(--text-secondary);letter-spacing:.04em;text-transform:uppercase">Blog</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:var(--space-5);margin-left:auto;flex-wrap:wrap;justify-content:flex-end">
+      <a href="index.html" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← Portfolio</a>
+      <button onClick="{{ toggleTheme }}" title="Toggle light and dark" style="width:36px;height:36px;border-radius:50%;border:1px solid var(--border-default);background:var(--white-04);color:var(--text-secondary);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-family:var(--font-body);transition:var(--transition)" style-hover="background:var(--white-08);color:var(--text-primary)">
+        <sc-if value="{{ isDark }}" hint-placeholder-val="{{ true }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"></path></svg>
+        </sc-if>
+        <sc-if value="{{ isLight }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.6v2.2M12 19.2v2.2M4.36 4.36l1.56 1.56M18.08 18.08l1.56 1.56M2.6 12h2.2M19.2 12h2.2M4.36 19.64l1.56-1.56M18.08 5.92l1.56-1.56"></path></svg>
+        </sc-if>
+      </button>
+    </nav>
+  </header>
+
+  <sc-if value="{{ isList }}">
+  <main style="max-width:1140px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <header style="display:flex;flex-direction:column;gap:var(--space-4);padding-bottom:var(--space-6)">
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(38px,8vw,72px);line-height:.95">{{ heading }}</h1>
+      <p style="margin:0;font-size:var(--text-md);color:var(--text-secondary);max-width:60ch;text-wrap:pretty">Interface teardowns, remixes, and whatever else I am building, in the yard or on a screen.</p>
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;padding-top:var(--space-2)">
+        <a href="#/" style="text-decoration:none;font-size:13px;padding:6px 14px;border-radius:var(--radius-pill);border:1px solid var(--border-default);color:var(--text-secondary)" style-hover="color:var(--text-primary);border-color:var(--blue-500)">All posts</a>
+        <sc-for list="{{ categories }}" as="c" hint-placeholder-count="3">
+          <a href="{{ c.href }}" style="text-decoration:none;font-size:13px;padding:6px 14px;border-radius:var(--radius-pill);border:1px solid var(--border-default);color:var(--text-secondary)" style-hover="color:var(--text-primary);border-color:var(--blue-500)">{{ c.name }}</a>
+        </sc-for>
+      </div>
+    </header>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--space-5)">
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="3">
+        <a href="{{ p.href }}" style="text-decoration:none;color:inherit;display:block">
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="0" hint-size="100%,380px">
+            <div style="border-radius:8px 8px 0 0;overflow:hidden;aspect-ratio:16/10;background:var(--ink-900)">
+              <img src="{{ p.cover }}" alt="{{ p.title }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+            </div>
+            <div style="padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-3)">
+              <span style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-450)">{{ p.category }}</span>
+              <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md);line-height:1.3">{{ p.title }}</h2>
+              <p style="margin:0;font-size:14px;color:var(--text-secondary);line-height:var(--leading-body)">{{ p.excerpt }}</p>
+              <span style="font-size:13px;color:var(--text-muted)">{{ p.dateLabel }} · {{ p.readTime }}</span>
+            </div>
+          </x-import>
+        </a>
+      </sc-for>
+    </div>
+    <sc-if value="{{ noPosts }}">
+      <p style="color:var(--text-secondary)">Nothing in this category yet.</p>
+    </sc-if>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isPost }}">
+  <main style="max-width:760px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← All posts</a>
+    <header style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-5) 0 var(--space-6)">
+      <span style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-450)">{{ post.category }}</span>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(30px,6vw,56px);line-height:1">{{ post.title }}</h1>
+      <div style="display:flex;gap:var(--space-3);align-items:center;font-size:13px;color:var(--text-muted);flex-wrap:wrap">
+        <span>{{ post.author }}</span><span>·</span><span>{{ post.dateLabel }}</span><span>·</span><span>{{ post.readTime }}</span>
+      </div>
+    </header>
+    <sc-if value="{{ hasPostCover }}">
+      <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);margin-bottom:var(--space-7)">
+        <img src="{{ postCover }}" alt="{{ postTitle }}" loading="lazy" style="width:100%;display:block">
+      </div>
+    </sc-if>
+    <div style="font-size:var(--text-md);line-height:1.7;color:var(--text-secondary)">{{ postBody }}</div>
+    <footer style="padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline);display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap">
+      <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← All posts</a>
+      <a href="mailto:kamseidl@gmail.com" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Tell me I'm wrong →</a>
+    </footer>
+  </main>
+  </sc-if>
+
+  <footer style="border-top:1px solid var(--border-hairline);margin-top:var(--space-8)">
+    <div style="max-width:1140px;margin:0 auto;padding:var(--space-6);display:flex;justify-content:space-between;gap:var(--space-5);flex-wrap:wrap;align-items:center">
+      <span style="font-size:14px;color:var(--text-muted)">Kam Seidl {{ year }}</span>
+      <div style="display:flex;gap:var(--space-5);flex-wrap:wrap">
+        <a href="index.html" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Portfolio</a>
+        <a href="index.html#/resume" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Resume</a>
+        <a href="mailto:kamseidl@gmail.com" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Email</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const catSlug = (n) => String(n).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+function md(src) {
+  const lines = String(src || "").replace(/\r\n/g, "\n").split("\n");
+  const out = [];
+  let list = null, para = [];
+  const inline = (t) => esc(t)
+    .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '<img src="$2" alt="$1" style="max-width:100%;border-radius:8px;display:block;margin:24px 0">')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color:var(--blue-500)">$1</a>')
+    .replace(/`([^`]+)`/g, '<code style="font-family:ui-monospace,monospace;font-size:.9em;background:var(--white-04);padding:2px 6px;border-radius:4px">$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong style="color:var(--text-primary);font-weight:500">$1</strong>')
+    .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  const flushP = () => { if (para.length) { out.push('<p style="margin:0 0 20px">' + inline(para.join(" ")) + "</p>"); para = []; } };
+  const flushL = () => { if (list) { out.push("</" + list + ">"); list = null; } };
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) { flushP(); flushL(); continue; }
+    const h = line.match(/^(#{1,4})\s+(.*)$/);
+    if (h) {
+      flushP(); flushL();
+      const sizes = { 1: 32, 2: 26, 3: 20, 4: 18 };
+      out.push('<h' + h[1].length + ' style="margin:36px 0 14px;font-family:var(--font-medium);font-size:' + sizes[h[1].length] + 'px;line-height:1.25;color:var(--text-primary)">' + inline(h[2]) + "</h" + h[1].length + ">");
+      continue;
+    }
+    if (/^>\s?/.test(line)) {
+      flushP(); flushL();
+      out.push('<blockquote style="margin:24px 0;padding:4px 0 4px 20px;border-left:2px solid var(--blue-500);color:var(--text-primary)">' + inline(line.replace(/^>\s?/, "")) + "</blockquote>");
+      continue;
+    }
+    const li = line.match(/^([-*]|\d+\.)\s+(.*)$/);
+    if (li) {
+      flushP();
+      const want = /^\d/.test(li[1]) ? "ol" : "ul";
+      if (list !== want) { flushL(); list = want; out.push("<" + want + ' style="margin:0 0 20px;padding-left:1.2em;display:flex;flex-direction:column;gap:8px">'); }
+      out.push("<li>" + inline(li[2]) + "</li>");
+      continue;
+    }
+    flushL();
+    para.push(line);
+  }
+  flushP(); flushL();
+  return out.join("\n");
+}
+
+class Component extends DCLogic {
+  state = {
+    route: (typeof location !== "undefined" ? location.hash.replace(/^#/, "") : "") || "/",
+    theme: "dark",
+    tick: 0
+  };
+
+  componentDidMount() {
+    this._onHash = () => {
+      this.setState({ route: location.hash.replace(/^#/, "") || "/" });
+      if (typeof window !== "undefined") window.scrollTo(0, 0);
+    };
+    window.addEventListener("hashchange", this._onHash);
+    let theme = "dark";
+    try { theme = localStorage.getItem("kam-theme") || "dark"; } catch (e) {}
+    document.body.setAttribute("data-theme", theme);
+    this.setState({ theme });
+    if (!window.KAM_POSTS) {
+      let n = 0;
+      this._poll = setInterval(() => {
+        n++;
+        if (window.KAM_POSTS || n > 40) {
+          clearInterval(this._poll);
+          this.setState(s => ({ tick: s.tick + 1 }));
+        }
+      }, 60);
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this._onHash);
+    if (this._poll) clearInterval(this._poll);
+  }
+
+  toggleTheme = () => {
+    const theme = this.state.theme === "dark" ? "light" : "dark";
+    document.body.setAttribute("data-theme", theme);
+    try { localStorage.setItem("kam-theme", theme); } catch (e) {}
+    this.setState({ theme });
+  };
+
+  decorate(p) {
+    const d = new Date(p.date + "T12:00:00");
+    const words = String(p.body || "").split(/\s+/).filter(Boolean).length;
+    return Object.assign({}, p, {
+      href: "#/" + p.slug,
+      dateLabel: isNaN(d) ? p.date : d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+      readTime: Math.max(1, Math.round(words / 200)) + " min read"
+    });
+  }
+
+  renderVals() {
+    const route = this.state.route;
+    const allPosts = (window.KAM_POSTS || []).map(p => this.decorate(p));
+    const categories = (window.KAM_CATEGORIES || []).map(n => ({ name: n, slug: catSlug(n), href: "#/cat/" + catSlug(n) }));
+
+    const catMatch = route.match(/^\/cat\/([^/]+)$/);
+    const slugMatch = route.match(/^\/(?!cat\/)([^/]+)$/);
+    const post = slugMatch ? allPosts.find(p => p.slug === slugMatch[1]) : null;
+    const activeCat = catMatch ? categories.find(c => c.slug === catMatch[1]) : null;
+    const listPosts = activeCat ? allPosts.filter(p => catSlug(p.category) === activeCat.slug) : allPosts;
+
+    return {
+      year: new Date().getFullYear(),
+      isDark: this.state.theme === "dark",
+      isLight: this.state.theme !== "dark",
+      toggleTheme: this.toggleTheme,
+      isPost: !!post,
+      isList: !post,
+      heading: activeCat ? activeCat.name : "Blog",
+      categories,
+      posts: listPosts,
+      noPosts: !post && listPosts.length === 0,
+      post: post || {},
+      hasPostCover: !!(post && post.cover),
+      postCover: (post && post.cover) || "",
+      postTitle: (post && post.title) || "",
+      postBody: post ? React.createElement("div", { dangerouslySetInnerHTML: { __html: md(post.body) } }) : null
+    };
+  }
+}
+</script>
+</body>
+</html>

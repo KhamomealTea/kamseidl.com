@@ -1,0 +1,74 @@
+/* ============================================================
+   Crucible — Color Tokens
+   A near-black, blue-accented "command center" palette derived
+   from crucible-stats (tailwind.config.js + utils/theme.ts).
+   ============================================================ */
+:root {
+  /* ---- Brand blue (the single accent that carries the system) ---- */
+  --blue-500: #0a8afe;   /* primary action / links / accents / hover-darker */
+  --blue-450: #0abafe;   /* bright cyan-blue — focus rings, hover-glow, selected tabs, stat accents */
+  --blue-700: #1a8cd8;   /* pressed / primary.dark */
+
+  /* ---- Deep navies (logos, secondary surfaces, gradients) ---- */
+  --navy-900: #082735;   /* "dark" */
+  --navy-800: #0c4b70;   /* "darker" */
+  --navy-750: #0e4475;   /* special-button gradient start */
+  --navy-700: #0c4981;   /* avatar fill */
+  --navy-ink: #1a283a;   /* MUI secondary — slate navy */
+
+  /* ---- Neutral ink ramp (the dark stage everything sits on) ---- */
+  --ink-1000: #000000;
+  --ink-950:  #0d0d0d;   /* app background ("midnight") */
+  --ink-900:  #121212;   /* "charcoal" */
+  --ink-850:  #141414;   /* card / paper surface */
+  --ink-800:  #1b1b1b;   /* elevated surface (chips, popovers) */
+  --ink-750:  #1b2b38;   /* selected toggle pill (navy-tinted) */
+  --ink-700:  #262729;   /* default border / hairline */
+  --ink-600:  #484848;   /* "dark-gray" */
+  --ink-500:  #5d5d5d;   /* gradient-border grey stop */
+
+  /* ---- Text ---- */
+  --text-primary:   #ffffff;
+  --text-secondary: #7e7e7e;
+  --text-muted:     #6d6d6d;
+  --text-faint:     #909090;
+  --text-accent:    #0a8afe;
+  --text-on-light:  #1a283a;   /* dark text for printable/light surfaces */
+
+  /* ---- Semantic ---- */
+  --danger-500: #fe4a55;   /* error text */
+  --danger-600: #d52f39;   /* error button bg */
+  --danger-700: #d32f2f;   /* MUI error.main */
+  --danger-edge: #ff3b3b;  /* red gradient-border stop */
+  --success-500: #87AD00; /* @kind color */
+  --warning-500: #f5a623;
+
+  /* ---- Alpha tints (used constantly for hover / hairlines) ---- */
+  --white-02: rgba(255, 255, 255, 0.02);
+  --white-04: rgba(255, 255, 255, 0.04);
+  --white-08: rgba(255, 255, 255, 0.08);
+  --white-10: rgba(255, 255, 255, 0.10);
+  --white-15: rgba(255, 255, 255, 0.15);
+  --white-24: rgba(255, 255, 255, 0.24);
+  --blue-tint-08: rgba(10, 138, 254, 0.08);
+  --blue-tint-12: rgba(10, 186, 254, 0.12);
+  --blue-tint-15: rgba(37, 173, 245, 0.10);
+  --danger-tint-16: rgba(232, 74, 84, 0.16);
+
+  /* ---- Semantic surface aliases ---- */
+  --surface-app:      var(--ink-950);
+  --surface-card:     var(--ink-850);
+  --surface-raised:   var(--ink-800);
+  --surface-input:    var(--ink-950);
+  --surface-selected: var(--ink-750);
+  --border-default:   var(--ink-700);
+  --border-subtle:    var(--white-10);
+  --border-hairline:  var(--white-08);
+
+  /* ---- Brand gradients (border-gradient + special button) ---- */
+  --grad-border-blue: linear-gradient(45deg, #5d5d5d 0%, #0a8afe 20%, #0a8afe 80%, #5d5d5d 100%); /* @kind color */
+  --grad-border-red:  linear-gradient(45deg, #5d5d5d 0%, #ff3b3b 20%, #ff3b3b 80%, #5d5d5d 100%); /* @kind color */
+  --grad-button-edge: linear-gradient(45deg, #fff 0%, #0a8afe 30%, #0a8afe 70%, #fff 100%); /* @kind color */
+  --grad-pill-edge:   linear-gradient(160deg, #5d5d5d 0%, #0a8afe 64%, #494949 100%); /* @kind color */
+  --grad-pill-fill:   linear-gradient(90deg, #0e4475 0%, #12171c 100%);
+}

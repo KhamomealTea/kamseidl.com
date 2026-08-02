@@ -1,0 +1,66 @@
+/* ============================================================
+   Crucible — Webfonts
+   Sohne (body), Avantt (display), Khand (stat/condensed headings)
+   ============================================================ */
+
+/* SOHNE — primary UI/body typeface (Klim Type Foundry) */
+@font-face {
+  font-family: "Sohne Buch";
+  src: local("Sohne Buch"), url("../assets/fonts/sohne-buch.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sohne Kraftig";
+  src: local("Sohne Kraftig"), url("../assets/fonts/sohne-kraftig.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* AVANTT — display / hero titles, used uppercase & italic (Displaay Type) */
+@font-face {
+  font-family: "Avantt";
+  src: local("Avantt"), url("../assets/fonts/Avantt-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avantt";
+  src: local("Avantt"), url("../assets/fonts/Avantt-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* KHAND — condensed numeric / stat headings (Indian Type Foundry, OFL) */
+@font-face {
+  font-family: "Khand";
+  src: url("../assets/fonts/Khand-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Khand";
+  src: url("../assets/fonts/Khand-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Khand";
+  src: url("../assets/fonts/Khand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Khand";
+  src: url("../assets/fonts/Khand-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

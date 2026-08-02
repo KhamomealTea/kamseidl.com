@@ -1,0 +1,39 @@
+/* ============================================================
+   Crucible — Typography Tokens
+   Sohne for UI/body, Avantt for display & stat numerals.
+   Scale mirrors QBTypography (xs..xlTitle) from crucible-stats.
+   ============================================================ */
+:root {
+  /* ---- Families ---- */
+  --font-body:    "Sohne Buch", Arial, system-ui, sans-serif;
+  --font-medium:  "Sohne Kraftig", "Sohne Buch", Arial, sans-serif;
+  --font-display: "Avantt", "Sohne Buch", sans-serif;   /* hero titles — uppercase, italic */
+  --font-stat:    "Avantt", "Sohne Buch", sans-serif;   /* big numerals / stat headers */
+
+  /* ---- Type scale (px values from QBTypography) ---- */
+  --text-xs:      14px;   /* table / fine print */
+  --text-sm:      16px;   /* default body */
+  --text-md:      18px;
+  --text-lg:      20px;
+  --text-xl:      28px;
+  --text-xxl:     32px;
+  --text-title:   36px;   /* section title */
+  --text-display: 48px;   /* hero / xlTitle */
+
+  /* ---- Weights ---- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     800;
+
+  /* ---- Line heights ---- */
+  --leading-tight:  120%;  /* display / titles */
+  --leading-body:   150%;  /* paragraphs */
+  --leading-snug:   134%;
+
+  /* ---- Tracking ---- */
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.02em;
+  --tracking-caps:   0.04em;  /* uppercase eyebrows */
+}

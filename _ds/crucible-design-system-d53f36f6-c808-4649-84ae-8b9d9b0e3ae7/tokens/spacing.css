@@ -1,0 +1,47 @@
+/* ============================================================
+   Crucible — Spacing, Radii, Shadows, Motion
+   ============================================================ */
+:root {
+  /* ---- Spacing scale (4px base; matches the 4/8/12/16/24/32/48 rhythm) ---- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+
+  /* ---- Radii (6 inputs/buttons · 8 cards · 10 toggles · 12 dialogs · pills) ---- */
+  --radius-xs:    2px;   /* checkbox */
+  --radius-sm:    6px;   /* buttons, inputs, selects */
+  --radius-md:    8px;   /* cards, paper, lists */
+  --radius-lg:    10px;  /* segmented toggle shell */
+  --radius-xl:    12px;  /* dialogs */
+  --radius-pill:  30px;  /* special button / chips */
+  --radius-full:  9999px;
+
+  /* ---- Borders ---- */
+  --border-width: 1px;
+  --border-line:  1px solid var(--border-default);
+  --border-soft:  1px solid var(--border-subtle);
+
+  /* ---- Elevation (low, soft — this UI leans on borders, not big shadows) ---- */
+  --shadow-1:     0 2px 4px rgba(0, 0, 0, 0.10);
+  --shadow-2:     0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-3:     0 6px 12px rgba(0, 0, 0, 0.12);
+  --shadow-pop:   0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-panel: 0 8px 32px rgba(0, 0, 0, 0.50);   /* floating AI panel / dialogs */
+  --shadow-glow:  0 4px 12px rgba(37, 173, 245, 0.30);  /* blue CTA glow */
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --dur-fast:   0.2s; /* @kind other */
+  --dur-base:   0.3s; /* @kind other */
+  --transition: all 0.2s ease; /* @kind other */
+
+  /* ---- Layout ---- */
+  --navbar-height: 72px;
+  --page-pad-x:    48px;
+  --page-pad-y:    32px;
+}
