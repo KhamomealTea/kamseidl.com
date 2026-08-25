@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Kam Seidl — Senior UI/UX Designer</title>
+<meta name="description" content="Kam Seidl, senior UI/UX designer. Thirteen years across live-service games, SaaS platforms, mobile titles, and client work.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kam Seidl — Senior UI/UX Designer">
+<meta property="og:description" content="Kam Seidl, senior UI/UX designer. Thirteen years across live-service games, SaaS platforms, mobile titles, and client work.">
+<meta property="og:image" content="https://khamomealtea.github.io/kamseidl.com/images/crucible/dashboard-crop.png">
+<meta property="og:url" content="https://khamomealtea.github.io/kamseidl.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-style='italic' font-weight='700' fill='%232dd4bf' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/colors.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/typography.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/tokens/base.css">
+<link rel="stylesheet" href="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/styles.css">
+<script src="_ds/crucible-design-system-d53f36f6-c808-4649-84ae-8b9d9b0e3ae7/_ds_bundle.js"></script>
+<script src="content/posts.js"></script>
+<script src="content/resume.js"></script>
+<style>
+  body { scroll-behavior: smooth; --font-display: "Bricolage Grotesque", "Avantt", system-ui, sans-serif; }
+  h1, h2, h3, [data-display] { font-style: normal !important; letter-spacing: -0.025em; }
+  /* Teal + purple accent retheme (overrides the Crucible blue tokens) */
+  body {
+    --blue-500: #2dd4bf;
+    --blue-450: #5eead4;
+    --blue-700: #14b8a6;
+    --text-accent: #2dd4bf;
+    --blue-tint-08: rgba(45, 212, 191, 0.10);
+    --blue-tint-12: rgba(94, 234, 212, 0.14);
+    --blue-tint-15: rgba(45, 212, 191, 0.12);
+    --purple-500: #a855f7;
+    --purple-400: #c084fc;
+    --purple-deep: #2e1a4d;
+    --navy-900: #2e1a4d;
+    --navy-800: #4c2a7a;
+    --navy-750: #3b2064;
+    --navy-700: #4c2a7a;
+    --navy-ink: #241c33;
+    --ink-750: #24303a;
+    --grad-border-blue: linear-gradient(45deg, #5d5d5d 0%, #2dd4bf 20%, #a855f7 80%, #5d5d5d 100%);
+    --grad-button-edge: linear-gradient(45deg, #fff 0%, #2dd4bf 30%, #a855f7 70%, #fff 100%);
+    --grad-pill-edge: linear-gradient(160deg, #5d5d5d 0%, #2dd4bf 64%, #494949 100%);
+    --grad-pill-fill: linear-gradient(90deg, #3b2064 0%, #12171c 100%);
+  }
+  body[data-theme="light"] {
+    --ink-950: #ffffff; --ink-900: #f4f5f7; --ink-850: #ffffff; --ink-800: #eef0f3;
+    --ink-750: #e4edf7; --ink-700: #dcdfe4; --ink-600: #8a929c; --ink-500: #b9bfc7;
+    --text-primary: #12171c; --text-secondary: #5b6472; --text-muted: #6d7783; --text-faint: #5b6472;
+    --surface-app: #f5f6f8; --surface-card: #ffffff; --surface-raised: #eef0f3; --surface-input: #ffffff;
+    --border-default: #dcdfe4; --border-subtle: rgba(0,0,0,.10); --border-hairline: rgba(0,0,0,.08);
+    --white-02: rgba(0,0,0,.02); --white-04: rgba(0,0,0,.035); --white-08: rgba(0,0,0,.06);
+    --white-10: rgba(0,0,0,.10); --white-15: rgba(0,0,0,.14); --white-24: rgba(0,0,0,.22);
+    --blue-450: #0f766e; --blue-500: #0f766e; --blue-700: #115e59; --text-accent: #0f766e;
+    --purple-500: #6d28d9; --purple-400: #7c3aed;
+    --blue-tint-08: rgba(15, 118, 110, 0.08);
+    --blue-tint-12: rgba(15, 118, 110, 0.12);
+    --blue-tint-15: rgba(15, 118, 110, 0.10);
+    color-scheme: light;
+    background-image: none;
+  }
+  body[data-theme="light"] .cr-card,
+  body[data-theme="light"] .cr-badge--default,
+  body[data-theme="light"] .cr-stat__value:not(.cr-stat__value--accent) { color: var(--text-primary); }
+  body[data-theme="light"] .cr-badge--default { background: var(--ink-800); }
+  body[data-theme="light"] .cr-stat__label { color: var(--text-secondary); }
+  body[data-theme="light"] .cr-btn--outline,
+  body[data-theme="light"] .cr-btn--ghost {
+    color: #000;
+    border: 1px solid var(--blue-500);
+  }
+  body[data-theme="light"] .cr-btn--secondary { background: #1a283a; color: #fff; }
+  body[data-theme="light"] .cr-check__box { border-color: var(--ink-600); }
+  ::selection { background: var(--blue-500); color: #fff; }
+  a:hover { color: var(--blue-450); }
+  @keyframes bambooSway {
+    0%, 100% { transform: translateX(-1.2%) skewX(-0.7deg); }
+    50%      { transform: translateX(1.2%)  skewX(0.7deg); }
+  }
+  @keyframes bambooGust {
+    0%   { transform: translateX(-55%); opacity: 0; }
+    12%  { opacity: .22; }
+    88%  { opacity: .22; }
+    100% { transform: translateX(155%); opacity: 0; }
+  }
+  [data-bamboo] { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  [data-bamboo] ~ header, [data-bamboo] ~ main, [data-bamboo] ~ footer { position: relative; z-index: 1; }
+  [data-bamboo] span {
+    position: absolute; inset: -12% -8%;
+    transform-origin: 50% 100%;
+    will-change: transform;
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 18%, #000 72%, transparent);
+    mask-image: linear-gradient(180deg, transparent, #000 18%, #000 72%, transparent);
+  }
+  [data-bamboo] span:nth-child(1) {
+    background-image:
+      radial-gradient(58% 26% at 14% 22%, var(--ink-950) 0 42%, transparent 78%),
+      radial-gradient(38% 34% at 71% 58%, var(--ink-950) 0 38%, transparent 74%),
+      radial-gradient(46% 18% at 39% 88%, var(--ink-950) 0 44%, transparent 80%),
+      repeating-linear-gradient(90deg,
+        transparent 0 96px,
+        color-mix(in srgb, var(--blue-450) 30%, transparent) 96px 98px,
+        transparent 98px 178px);
+    opacity: .05;
+    animation: bambooSway 19s ease-in-out infinite;
+  }
+  [data-bamboo] span:nth-child(2) {
+    background-image:
+      radial-gradient(44% 30% at 86% 18%, var(--ink-950) 0 40%, transparent 76%),
+      radial-gradient(52% 22% at 28% 63%, var(--ink-950) 0 46%, transparent 82%),
+      repeating-linear-gradient(90deg,
+        transparent 0 143px,
+        color-mix(in srgb, var(--purple-500, #a855f7) 34%, transparent) 143px 144px,
+        transparent 144px 261px);
+    opacity: .045;
+    animation: bambooSway 27s ease-in-out -6s infinite;
+  }
+  [data-bamboo] span:nth-child(3) {
+    background-image:
+      radial-gradient(34% 40% at 8% 70%, var(--ink-950) 0 36%, transparent 72%),
+      radial-gradient(60% 24% at 62% 12%, var(--ink-950) 0 42%, transparent 78%),
+      radial-gradient(30% 28% at 93% 82%, var(--ink-950) 0 40%, transparent 76%),
+      repeating-linear-gradient(90deg,
+        transparent 0 61px,
+        color-mix(in srgb, var(--blue-450) 22%, transparent) 61px 62px,
+        transparent 62px 119px);
+    opacity: .028;
+    animation: bambooSway 34s ease-in-out -14s infinite;
+  }
+  [data-bamboo] span:nth-child(4) {
+    inset: -20% -60%;
+    background-image: linear-gradient(100deg, transparent 0%,
+      color-mix(in srgb, var(--blue-450) 12%, transparent) 42%,
+      color-mix(in srgb, var(--blue-450) 16%, transparent) 50%,
+      transparent 100%);
+    opacity: .25;
+    filter: blur(28px);
+    animation: bambooGust 26s linear infinite;
+    -webkit-mask-image: none; mask-image: none;
+  }
+  body[data-theme="light"] [data-bamboo] span:nth-child(1),
+  body[data-theme="light"] [data-bamboo] span:nth-child(3) { opacity: .08; }
+  body[data-theme="light"] [data-bamboo] span:nth-child(2) { opacity: .065; }
+  @keyframes clipRevealX { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  .reveal-clip { clip-path: inset(0 100% 0 0); }
+  .reveal-clip.is-in { animation: clipRevealX .8s cubic-bezier(.65,0,.35,1) both; }
+  @media (prefers-reduced-motion: reduce) {
+    [data-bamboo] span { animation: none !important; }
+    h1 { animation: none !important; clip-path: none !important; }
+    [data-bamboo] span:nth-child(4) { display: none; }
+  }
+  body[data-density="airy"] { --space-4: 20px; --space-5: 28px; --space-6: 40px; --space-7: 68px; --space-8: 104px; }
+  body[data-density="compact"] { --space-4: 12px; --space-5: 16px; --space-6: 20px; --space-7: 28px; --space-8: 40px; }
+  body[data-voice="clean"] h1,
+  body[data-voice="clean"] h2,
+  body[data-voice="clean"] h3,
+  body[data-voice="clean"] [data-display] {
+    font-family: var(--font-body) !important;
+    font-style: normal !important;
+    text-transform: none !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.015em !important;
+  }
+  .cr-btn--primary { color: var(--on-accent, #fff) !important; }
+  .cr-card__body { padding: 32px !important; }
+  a[data-workcard] .cr-card__body { padding: 0 !important; }
+  @media (max-width: 640px) { [data-spec] { grid-template-columns: 1fr !important; gap: 4px var(--space-4) !important; } }
+  a[data-workcard] { height: 100%; flex: 1 1 340px; max-width: calc((100% - 2 * var(--space-5)) / 3); min-height: 600px; }
+  @media (max-width: 1100px) { a[data-workcard] { max-width: calc((100% - var(--space-5)) / 2); } }
+  @media (max-width: 720px) { a[data-workcard] { max-width: 100%; min-height: 0; } }
+  a[data-workcard] .cr-card { overflow: hidden; flex: 1 1 auto; height: auto; }
+  a[data-workcard] .cr-card--gradient::before { z-index: 2; pointer-events: none; }
+  a[data-workcard] .cr-card__body { position: relative; z-index: 1; }
+  a[data-workcard] .cr-card__body > div:first-child { border-radius: 8px 8px 0 0 !important; }
+  a[data-workcard] .cr-card { display: flex; flex-direction: column; }
+  a[data-workcard] .cr-card__body { flex: 1; display: flex; flex-direction: column; }
+  a[data-workcard] .cr-card__body > div:last-child { flex: 1; }
+  a[data-workcard] .cr-card__body > div:last-child > span:last-child { margin-top: auto; padding-top: var(--space-4); }
+  a[data-workrow] { padding: var(--space-6) 0; }
+  a[data-workrow] + a[data-workrow] { border-top: 1px solid var(--border-hairline); }
+  a[data-workrow] [data-stack] { column-gap: var(--space-8); }
+  a[data-workrow] [data-worktext] { max-width: 44ch; justify-self: center; }
+  @media (max-width: 860px) { a[data-workrow] [data-worktext] { margin: 0 auto; justify-self: auto; } }
+  @media (max-width: 860px) {
+    [data-stack] { grid-template-columns: 1fr !important; }
+    [data-stack-reverse] > :first-child { order: 2; }
+  }
+  @media (max-width: 600px) {
+    main { padding-left: 20px !important; padding-right: 20px !important; }
+    header[data-nav] { padding-left: 16px !important; padding-right: 16px !important; height: auto !important; min-height: 72px; padding-top: 12px !important; padding-bottom: 12px !important; flex-wrap: wrap; }
+  }
+  @media print {
+    body { background: #fff !important; }
+    [data-print="hide"] { display: none !important; }
+  }
+</style>
+</helmet>
+
+<div style="min-height:100vh;position:relative;color:var(--text-primary);font-family:var(--font-body);font-size:var(--text-sm);line-height:var(--leading-body)">
+
+  <div data-bamboo="1" data-print="hide" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header data-print="hide" data-nav="1" style="position:sticky;top:0;z-index:50;height:72px;display:flex;align-items:center;gap:var(--space-5);padding:0 var(--space-6);background:color-mix(in srgb, var(--surface-app) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-hairline)">
+    <a href="#/" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--text-primary)">
+      <span data-display="1" style="font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.02em;font-size:20px">Kam Seidl</span>
+      <span style="font-size:12px;color:var(--text-secondary);letter-spacing:.04em;text-transform:uppercase">UI/UX</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:var(--space-5);margin-left:auto;flex-wrap:wrap;justify-content:flex-end">
+      <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent" style-hover="color:var(--text-primary);border-bottom-color:var(--blue-500)">Work</a>
+      <a href="#/bio" style="font-size:14px;color:var(--text-secondary);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent" style-hover="color:var(--text-primary);border-bottom-color:var(--blue-500)">Bio</a>
+      <a href="mailto:kamseidl@gmail.com" style="font-size:14px;color:var(--text-secondary);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent" style-hover="color:var(--text-primary);border-bottom-color:var(--blue-500)">Contact</a>
+      <button onClick="{{ toggleTheme }}" title="Toggle light and dark" style="width:36px;height:36px;border-radius:var(--radius-sm);border:1px solid var(--border-default);background:var(--white-04);color:var(--text-secondary);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-family:var(--font-body);transition:var(--transition)" style-hover="background:var(--white-08);color:var(--text-primary)">
+        <sc-if value="{{ isDark }}" hint-placeholder-val="{{ true }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"></path></svg>
+        </sc-if>
+        <sc-if value="{{ isLight }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.6v2.2M12 19.2v2.2M4.36 4.36l1.56 1.56M18.08 18.08l1.56 1.56M2.6 12h2.2M19.2 12h2.2M4.36 19.64l1.56-1.56M18.08 5.92l1.56-1.56"></path></svg>
+        </sc-if>
+      </button>
+      <a href="#/resume" style="text-decoration:none">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Button" size="sm" hint-size="120px,36px">Resume</x-import>
+      </a>
+    </nav>
+  </header>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <main style="max-width:1140px;margin:0 auto;padding:var(--space-8) var(--space-6) var(--space-7)">
+
+    <section style="display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-8);align-items:center;padding:var(--space-6) 0 var(--space-8)">
+      <div style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap">
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="accent" dot="{{ true }}" hint-size="180px,24px">Open to Senior &amp; Lead UX roles</x-import>
+          <span style="font-size:13px;color:var(--text-secondary);letter-spacing:.04em;text-transform:uppercase">Atlanta, GA</span>
+        </div>
+        <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(38px,9vw,84px);line-height:.95;letter-spacing:-.01em;color:color-mix(in srgb, var(--text-primary) 82%, var(--text-secondary));clip-path:inset(0 0 0 0);animation:clipRevealX .9s cubic-bezier(.65,0,.35,1) .1s both">Kam Seidl</h1>
+        <p style="margin:0;font-size:var(--text-md);line-height:var(--leading-body);color:var(--text-secondary);max-width:58ch;text-wrap:pretty">Thirteen years across live-service games, SaaS platforms, mobile titles, and client work. A shooter played by millions, a quarterback training platform, slots built under licensor review, a consultancy selling to federal agencies and small businesses at once.</p>
+        <p style="margin:0;font-size:var(--text-md);line-height:var(--leading-body);color:var(--text-primary);font-weight:600;max-width:58ch;text-wrap:pretty">What carries between them is not a style. It is a habit: find the goal, find what's getting in its way, and clear the path.</p>
+      </div>
+    </section>
+
+    <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:var(--space-5);padding:var(--space-6) var(--space-6);border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
+      <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="13" unit="yrs" label="Design experience" size="{{ 48 }}" accent="{{ true }}" hint-size="100%,80px"></x-import>
+      <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="7" unit="yrs" label="Web / PC design" size="{{ 48 }}" hint-size="100%,80px"></x-import>
+      <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="6" unit="yrs" label="Mobile design" size="{{ 48 }}" hint-size="100%,80px"></x-import>
+      <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="5" label="Studios shipped with" size="{{ 48 }}" hint-size="100%,80px"></x-import>
+    </section>
+
+    <section id="work" style="padding:0 0 var(--space-7)">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-5);flex-wrap:wrap;padding:var(--space-5) 0 var(--space-3)">
+        <h2 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-title);line-height:var(--leading-tight)">Selected work</h2>
+      </div>
+
+      <span style="display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);margin:0 0 var(--space-2)">Product &amp; Web</span>
+      <div style="display:flex;flex-direction:column">
+        <a href="#/work/crucible" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
+          <div data-stack="1" data-stack-reverse="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
+            <div data-worktext="1" style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="130px,24px">Learning mobile app</x-import>
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="110px,24px">Web portal · SaaS</x-import>
+              </div>
+              <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xl);line-height:1.1">Crucible</h3>
+              <p style="margin:0;font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-450)">Product Design · UX / UI · Product Marketing</p>
+              <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I designed the coach-facing planning workflow for the web portal, and the mobile learning experience: 3D sims and whiteboard lessons built to sharpen reaction time off the field.</p>
+              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Sales up 45% after my additions shipped.</p>
+              <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
+            </div>
+            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
+              <video src="videos/crucible-stats.mp4" poster="images/crucible/dashboard-crop.png" data-clip-start="29" data-clip-end="36" autoplay muted loop playsinline preload="metadata" aria-label="Building a game plan in the Crucible coach portal" style="width:100%;height:100%;object-fit:cover;object-position:center bottom;display:block"></video>
+            </div>
+          </div>
+        </a>
+        <a href="#/work/vcs" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
+          <div data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
+            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
+              <div style="position:relative;width:100%;height:100%;background:#2e1a4d">
+                <img src="images/vcs/office-1200.jpg" alt="" aria-hidden="true" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.08);opacity:.72">
+                <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(46,26,77,.90) 0%, rgba(76,42,122,.72) 45%, rgba(13,13,13,.92) 100%);mix-blend-mode:multiply"></div>
+                <div style="position:absolute;inset:0;background:linear-gradient(100deg, rgba(46,26,77,.62) 0%, rgba(13,13,13,.34) 55%, rgba(13,13,13,.78) 100%)"></div>
+                <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:var(--space-6)">
+                  <span style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5eead4">yourvcs.com</span>
+                  <span data-display="1" style="font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(20px,2.6vw,30px);line-height:1.05;color:#ffffff">One company.<br>Two markets.</span>
+                  <span style="font-size:13px;color:rgba(255,255,255,.72)">Federal agencies and small businesses, one site</span>
+                </div>
+              </div>
+            </div>
+            <div data-worktext="1" style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="120px,24px">V Consulting Services</x-import>
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="110px,24px">Web · Brand · Client work</x-import>
+              </div>
+              <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xl);line-height:1.1">VCS</h3>
+              <p style="margin:0;font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-450)">UX / UI · Brand identity · Client sites</p>
+              <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The site for an AI consultancy selling to federal agencies and small businesses at once, plus sites for their clients.</p>
+              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Two audiences who share nothing, one front door.</p>
+              <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <span style="display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);margin:var(--space-7) 0 var(--space-5)">Games</span>
+      <div style="display:flex;flex-direction:column">
+        <a href="#/work/paladins" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
+          <div data-stack="1" data-stack-reverse="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
+            <div data-worktext="1" style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">Hi-Rez Studios</x-import>
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="110px,24px">PC / Console · Live service</x-import>
+              </div>
+              <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xl);line-height:1.1">Paladins</h3>
+              <p style="margin:0;font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-450)">Sole → Lead UI/UX · Retention · Monetization</p>
+              <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Rebuilt the out-of-game experience of a nine-year live shooter: store, inventory, quests, daily login, and per-champion HUDs.</p>
+              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Cut the 7-click purchase flow, four clicks above the genre standard.</p>
+              <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
+            </div>
+            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
+              <video src="videos/paladins.mp4" poster="https://static.wixstatic.com/media/5bd717_7a966100247840b98500f2c81f6efe20f001.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Paladins out-of-game UI" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+            </div>
+          </div>
+        </a>
+        <a href="#/work/smite-2" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
+          <div data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
+            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
+              <video src="videos/smite2.mp4" poster="https://static.wixstatic.com/media/5bd717_4aaa877f4d00451f9073de976636b706f001.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Smite 2 interface" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+            </div>
+            <div data-worktext="1" style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">Hi-Rez Studios</x-import>
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="110px,24px">PC / Console · Live service</x-import>
+              </div>
+              <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xl);line-height:1.1">Smite 2</h3>
+              <p style="margin:0;font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-450)">System design · Modernization · Retention</p>
+              <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Reimagined core out-of-game systems for the sequel, simplification first, boutique themed UI second.</p>
+              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">A modern front end a returning audience does not have to relearn.</p>
+              <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
+            </div>
+          </div>
+        </a>
+        <a href="#/work/woz-magic-match" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
+          <div data-stack="1" data-stack-reverse="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
+            <div data-worktext="1" style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="60px,24px">Zynga</x-import>
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="110px,24px">Mobile · Live service</x-import>
+              </div>
+              <h3 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:var(--text-xl);line-height:1.05;text-wrap:balance">Wizard of Oz<span style="opacity:.55">:</span><br>Magic Match</h3>
+              <p style="margin:0;font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-450)">Research · Retention · Modernization</p>
+              <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Four programs on a declining match-3 title: two new features, a UI modernization, and an outsourcing pipeline.</p>
+              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Includes the redesign that failed, and what I did next.</p>
+              <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
+            </div>
+            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
+              <video src="videos/woz.mp4" poster="https://static.wixstatic.com/media/5bd717_d3089bf218a74f20b935d19183b6932b~mv2.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Wizard of Oz: Magic Match" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section style="padding:var(--space-7) 0">
+      <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="40" hint-size="100%,240px">
+        <div style="display:flex;flex-direction:column;gap:var(--space-5);max-width:70ch">
+          <span style="font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">What leads say</span>
+          <p style="margin:0;font-family:var(--font-medium);font-size:clamp(20px,2vw,26px);line-height:1.35;text-wrap:pretty">“Kam absolutely owned UI/UX as a single individual. She was self-sufficient, self-managing, and clear on her tasks. It was a massive relief to have a pro at the helm.”</p>
+          <div style="display:flex;align-items:center;gap:var(--space-3)">
+            <a href="https://www.linkedin.com/in/daniel-lilleberg-9067487/" target="_blank" rel="noopener noreferrer" title="Daniel Lilleberg on LinkedIn" style="display:inline-flex;border-radius:50%;text-decoration:none" style-hover="box-shadow:0 0 0 2px var(--blue-500)">
+              <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Avatar" name="Daniel Lilleberg" size="{{ 40 }}" hint-size="40px,40px"></x-import>
+            </a>
+            <div>
+              <div style="font-size:15px;font-family:var(--font-medium)">Daniel Lilleberg</div>
+              <div style="font-size:13px;color:var(--text-secondary)">Executive Producer and Art VP at Hi-Rez Studios</div>
+            </div>
+          </div>
+          <a href="#/bio" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Read all recommendations →</a>
+        </div>
+      </x-import>
+    </section>
+
+    <section style="padding:var(--space-7) 0 var(--space-8)">
+      <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="gradient" padding="40" hint-size="100%,200px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap">
+          <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+            <h2 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xxl);line-height:var(--leading-tight)">Hiring for UX?</h2>
+            <p style="margin:0;font-size:var(--text-md);color:var(--text-secondary);max-width:52ch">My resume is one click away, and I answer email the same day.</p>
+          </div>
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap">
+            <a href="#/resume" style="text-decoration:none">
+              <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Button" size="lg" variant="primary" glow="{{ true }}" hint-size="140px,48px">See resume</x-import>
+            </a>
+            <a href="mailto:kamseidl@gmail.com" style="text-decoration:none">
+              <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Button" size="lg" variant="outline" hint-size="130px,48px">Email me</x-import>
+            </a>
+          </div>
+        </div>
+      </x-import>
+    </section>
+
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isBio }}">
+  <main style="max-width:900px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <div data-stack="1" style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:var(--space-7);align-items:center">
+      <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:3/4;max-width:200px">
+        <img src="https://static.wixstatic.com/media/5bd717_aab884eecf954f50978060e4815d563f~mv2.jpg" alt="Kam Seidl" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+        <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;text-wrap:pretty">Every product I have worked on has been someone else's world: a casino floor, a card game's economy, a quarterback's film study. What travels with me between them is the same instinct, figure out what the person using it actually needs, fast.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Thirteen years of it. Seven in web and PC, six in mobile, across industries that share almost nothing.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Live titles with fixed ship dates taught me to plan the day a project is approved and to work agile beside the engineers building it. I have led a team and I have been the only designer in the room, and I am better for having done both.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">When a domain is new to me, I learn enough to be useful and ask the people who live in it for the rest. That is how a designer who had never called a play ended up designing how quarterbacks study.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Lately that means carrying what games taught me about attention, motivation, and clarity into SaaS. Scientific Games, Caesars, Zynga, Hi-Rez, and most recently Crucible.</p>
+        <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;padding-top:var(--space-2)">
+          <a href="#/resume" style="text-decoration:none">
+            <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Button" variant="primary" glow="{{ true }}" hint-size="120px,40px">Full resume</x-import>
+          </a>
+          <a href="mailto:kamseidl@gmail.com" style="text-decoration:none">
+            <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Button" variant="outline" hint-size="120px,40px">Get in touch</x-import>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section style="padding:var(--space-8) 0 0">
+      <h2 style="margin:0 0 var(--space-5);font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-title)">Recommendations</h2>
+      <div style="display:flex;flex-direction:column;gap:var(--space-5)">
+
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="32" hint-size="100%,220px">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+            <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-md);line-height:1.45;text-wrap:pretty">“Kam’s exceptional creativity, technical expertise, and pragmatism have made a significant impact on the game we worked on, and I am confident that she will be an invaluable asset to any team she joins.”</p>
+            <sc-if value="{{ t0Open }}">
+              <div style="display:flex;flex-direction:column;gap:var(--space-3);color:var(--text-secondary);line-height:var(--leading-body);border-left:2px solid var(--blue-500);padding-left:var(--space-4)">
+                <p style="margin:0">I had the privilege of working with Kam for the past three and a half years at Hi-Rez Studios, where she, as sole and Senior UI/UX Designer on Paladins, reported directly to me.</p>
+                <p style="margin:0">Kam played a critical role in the design and implementation of several major features in Paladins, including the Daily Login and Quest systems, custom mutators for game modes, and the complete rework of the Item Store UI in the Siege: Beyond update. Her ability to manage large-scale design projects, deliver polished, intuitive user interfaces, and collaborate across disciplines, often under tight deadlines, was instrumental to the game's success.</p>
+                <p style="margin:0">Kam took point on several process improvements and helped to establish best practices on Paladins. She was pivotal in prioritizing UI/UX features and managing project milestones to align with tight deadlines. Her mentorship and knowledge-sharing helped integrate newcomers into the team swiftly and effectively.</p>
+                <p style="margin:0">She has a keen eye for monetization opportunities, and her work on high-impact features like the Trials Rework, UI Style Guide, and Bounty Store UI directly contributed to improved player retention and engagement. I enthusiastically recommend Kam.</p>
+              </div>
+            </sc-if>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap">
+              <div style="display:flex;align-items:center;gap:var(--space-3)">
+                <a href="https://www.linkedin.com/search/results/people/?keywords=Daniel%20Fishman%20Hi-Rez" target="_blank" rel="noopener noreferrer" title="Daniel Fishman on LinkedIn" style="display:inline-flex;border-radius:50%;text-decoration:none" style-hover="box-shadow:0 0 0 2px var(--blue-500)">
+                  <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Avatar" name="Daniel Fishman" size="{{ 36 }}" hint-size="36px,36px"></x-import>
+                </a>
+                <div>
+                  <div style="font-size:15px;font-family:var(--font-medium)">Daniel Fishman</div>
+                  <div style="font-size:13px;color:var(--text-secondary)">Lead Game Designer and Mentor at Hi-Rez Studios</div>
+                </div>
+              </div>
+              <button onClick="{{ toggleT0 }}" style="background:none;border:none;padding:0;color:var(--blue-500);font-family:var(--font-medium);font-size:14px;cursor:pointer">{{ t0Label }}</button>
+            </div>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="32" hint-size="100%,220px">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+            <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-md);line-height:1.45;text-wrap:pretty">“The game industry is actually behind on UX and usability, and the key is an understanding of basic UX from other fields and the new emerging language in games. It’s vital, and Kam is pushing forward with those sensibilities.”</p>
+            <sc-if value="{{ t1Open }}">
+              <div style="display:flex;flex-direction:column;gap:var(--space-3);color:var(--text-secondary);line-height:var(--leading-body);border-left:2px solid var(--blue-500);padding-left:var(--space-4)">
+                <p style="margin:0">It’s awesome to hear about someone and see their work building a clear reputation of passion and consistency, and it’s even better to get a chance to work with that person. As a long-time employee on Paladins, I knew its UI needs back to front, and when I was moved to other teams I was hoping the project would get the talent it needed.</p>
+                <p style="margin:0">Even being on another team with light crossover, it was clear that Kam was that person. Just seeing the effort, the attention to detail, and the ambition of quality that Kam would post on JIRA was worth keeping your eye out for.</p>
+                <p style="margin:0">UI is complicated; the venn diagram of cosmetic needs and UX needs is hard to parse and even harder to explain, but so clear when it’s all done right. Kam lived up to the reputation of her passion and energy.</p>
+              </div>
+            </sc-if>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap">
+              <div style="display:flex;align-items:center;gap:var(--space-3)">
+                <a href="https://www.linkedin.com/search/results/people/?keywords=Casey%20Edwards%20Hi-Rez" target="_blank" rel="noopener noreferrer" title="Casey Edwards on LinkedIn" style="display:inline-flex;border-radius:50%;text-decoration:none" style-hover="box-shadow:0 0 0 2px var(--blue-500)">
+                  <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Avatar" name="Casey Edwards" size="{{ 36 }}" hint-size="36px,36px"></x-import>
+                </a>
+                <div>
+                  <div style="font-size:15px;font-family:var(--font-medium)">Casey Edwards</div>
+                  <div style="font-size:13px;color:var(--text-secondary)">Art Director and Character Concept Artist at Hi-Rez Studios</div>
+                </div>
+              </div>
+              <button onClick="{{ toggleT1 }}" style="background:none;border:none;padding:0;color:var(--blue-500);font-family:var(--font-medium);font-size:14px;cursor:pointer">{{ t1Label }}</button>
+            </div>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="32" hint-size="100%,220px">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+            <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-md);line-height:1.45;text-wrap:pretty">“Kam absolutely owned UI/UX as a single individual. She was self-sufficient, self-managing, and clear on her tasks. It was a massive relief to have a pro at the helm.”</p>
+            <sc-if value="{{ t2Open }}">
+              <div style="display:flex;flex-direction:column;gap:var(--space-3);color:var(--text-secondary);line-height:var(--leading-body);border-left:2px solid var(--blue-500);padding-left:var(--space-4)">
+                <p style="margin:0">I could tell directly that she took full responsibility for her portion of the pipeline. As the new EP on a team that had just undergone staffing reductions, I was concerned for every portion of the pipeline still being able to function, and it was a massive relief to see that Kam was fully on top of her role.</p>
+                <p style="margin:0">She had already made adjustments with the shifting sands on the project team and was focused on keeping things moving. Kam, alone handling UX/UI as well as UI Art, was not a part of the project I had to be concerned about. I would definitely recommend her as someone who is very reliable and passionate about her role in game development.</p>
+              </div>
+            </sc-if>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap">
+              <div style="display:flex;align-items:center;gap:var(--space-3)">
+                <a href="https://www.linkedin.com/in/daniel-lilleberg-9067487/" target="_blank" rel="noopener noreferrer" title="Daniel Lilleberg on LinkedIn" style="display:inline-flex;border-radius:50%;text-decoration:none" style-hover="box-shadow:0 0 0 2px var(--blue-500)">
+                  <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Avatar" name="Daniel Lilleberg" size="{{ 36 }}" hint-size="36px,36px"></x-import>
+                </a>
+                <div>
+                  <div style="font-size:15px;font-family:var(--font-medium)">Daniel Lilleberg</div>
+                  <div style="font-size:13px;color:var(--text-secondary)">Executive Producer and Art VP at Hi-Rez Studios</div>
+                </div>
+              </div>
+              <button onClick="{{ toggleT2 }}" style="background:none;border:none;padding:0;color:var(--blue-500);font-family:var(--font-medium);font-size:14px;cursor:pointer">{{ t2Label }}</button>
+            </div>
+          </div>
+        </x-import>
+
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isCrucible }}">
+  <main style="max-width:1000px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← All work</a>
+    <header style="padding:var(--space-5) 0 var(--space-7);display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">Crucible Tech</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="130px,24px">Web portal · Mobile · SaaS</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="accent" hint-size="130px,24px">Product Designer</x-import>
+      </div>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95">Crucible</h1>
+      <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:62ch;text-wrap:pretty">Crucible trains quarterbacks in a 3D decision simulator and gives coaches an analytics portal to track it. I designed both sides.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-5);padding-top:var(--space-4);border-top:1px solid var(--border-hairline)">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="45" unit="%" label="Sales increase" size="{{ 40 }}" accent="{{ true }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="2" label="Audiences, one portal" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="4" label="Levels, youth to pro" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+      </div>
+    </header>
+
+    <section data-spec="1" style="display:grid;grid-template-columns:160px minmax(0,1fr);gap:var(--space-4) var(--space-6);max-width:82ch;padding-bottom:var(--space-7);margin-bottom:var(--space-7);border-bottom:1px solid var(--border-hairline)">
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Role</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Product Designer, covering UX, UI, and product marketing</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Responsibilities</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Product strategy, information architecture, content modeling, interaction design, design system, onboarding, prototyping, marketing site</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Team</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Founders, backend and frontend engineers, and football subject-matter experts</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Tools</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Figma, Adobe CC, engineering handoff</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Timeline</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Nov 2025 to present</p>
+    </section>
+
+
+    <figure style="margin:0 0 var(--space-8)">
+      <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+        <video src="videos/crucible-marketing.mp4" autoplay muted loop playsinline preload="metadata" aria-label="The Crucible marketing site" style="width:100%;display:block"></video>
+      </div>
+      <figcaption style="padding-top:var(--space-3);font-size:14px;color:var(--text-secondary)">The marketing site: the story a coach reads before they ever see the portal.</figcaption>
+    </figure>
+
+
+    <section style="display:flex;flex-direction:column;gap:var(--space-8)">
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+        <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Easing the friction in what already shipped</h2>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The product worked. It just asked too much of the people using it. I cut steps out of the paths coaches use daily and rebuilt login and onboarding so a new user actually reaches their first session.</p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Same product, far less to get through.</p>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">QB Lab: a learning loop in front of the simulator</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Athletes were dropped into simulated reps with nowhere to learn the vocabulary those reps assume. QB Lab is where they build it first.</p>
+        </div>
+
+        <figure style="margin:0">
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+            <img src="images/crucible/qb-lab-installs.png" alt="A QB Lab install expanded to show its lessons, their progress, and the concepts each one covers" loading="lazy" style="width:100%;display:block">
+          </div>
+          <figcaption style="padding-top:var(--space-3);font-size:14px;color:var(--text-secondary)">An install opened up: each lesson carries its own progress, status, and the concepts it drills.</figcaption>
+        </figure>
+
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="32" hint-size="100%,220px">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+            <span style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">The content model a coach builds in, staged privately until it is ready</span>
+            <div style="display:flex;align-items:stretch;gap:var(--space-3);flex-wrap:wrap">
+              <div style="flex:1;min-width:160px;padding:var(--space-4);border-radius:var(--radius-md);background:var(--white-04);border:1px solid var(--border-hairline)">
+                <div style="font-family:var(--font-medium);font-size:15px">Install</div>
+                <div style="font-size:13px;color:var(--text-muted);padding-top:4px">The org's stack. Draft until published.</div>
+              </div>
+              <div style="align-self:center;color:var(--blue-500);font-size:20px">→</div>
+              <div style="flex:1;min-width:160px;padding:var(--space-4);border-radius:var(--radius-md);background:var(--white-04);border:1px solid var(--border-hairline)">
+                <div style="font-family:var(--font-medium);font-size:15px">Lesson</div>
+                <div style="font-size:13px;color:var(--text-muted);padding-top:4px">One unit of study, published on its own schedule.</div>
+              </div>
+              <div style="align-self:center;color:var(--blue-500);font-size:20px">→</div>
+              <div style="flex:1.4;min-width:200px;padding:var(--space-4);border-radius:var(--radius-md);background:var(--blue-tint-08);border:1px solid var(--border-hairline)">
+                <div style="font-family:var(--font-medium);font-size:15px">Modules + practice reps</div>
+                <div style="font-size:13px;color:var(--text-muted);padding-top:4px">The learning cards, and the plays and coverages that drill them.</div>
+              </div>
+            </div>
+          </div>
+        </x-import>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-5)">
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Two ways to build a lesson</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Normal mode picks the modules from the plays a coach already chose. Expert mode opens the full library. One flow, two levels of trust in the tool.</p>
+            </div>
+          </x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Their words, not ours</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Every module and play name renders in the organization's own terminology, so a lesson reads like that program's film room.</p>
+            </div>
+          </x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Order is teaching</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Coaches drag modules into the order they want taught. Sequence is part of the lesson, so it had to be theirs.</p>
+            </div>
+          </x-import>
+        </div>
+
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Study the concept, rep it, read the decision data, go back to what tripped you up.</p>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">03</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Offensive Info: flashcards, not coursework</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">QB Lab satisfied coaches and lost the players. Teenagers opened it, felt school, and stalled out partway through. So I rebuilt the study half as flashcards.</p>
+        </div>
+
+        <figure style="margin:0">
+          <div style="position:relative;aspect-ratio:2.13/1;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+            <sc-for list="{{ oiSlides }}" as="s" hint-placeholder-count="3">
+              <img src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy" style="{{ s.style }}">
+            </sc-for>
+            <button onClick="{{ oiPrev }}" aria-label="Previous screen" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1px solid var(--border-subtle);background:rgba(13,13,13,.62);backdrop-filter:blur(6px);color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(13,13,13,.85)">‹</button>
+            <button onClick="{{ oiNext }}" aria-label="Next screen" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1px solid var(--border-subtle);background:rgba(13,13,13,.62);backdrop-filter:blur(6px);color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(13,13,13,.85)">›</button>
+            <div style="position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px">
+              <sc-for list="{{ oiDots }}" as="d" hint-placeholder-count="3">
+                <button onClick="{{ d.go }}" aria-label="{{ d.label }}" style="padding:10px 8px;margin:0;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:24px;min-height:28px">
+                  <span style="{{ d.style }}"></span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+          <figcaption style="padding-top:var(--space-3);font-size:14px;color:var(--text-secondary)">{{ oiCaption }}</figcaption>
+        </figure>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--space-5)">
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Learn mode</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Term on the front, answer on the back, at the player&rsquo;s own pace. No clock, no score.</p>
+            </div>
+          </x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Test mode</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">The same set against a timer, scored on speed as well as accuracy.</p>
+            </div>
+          </x-import>
+        </div>
+
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);max-width:70ch;text-wrap:pretty">The color is data. An organization sets its own palette and every surface picks it up, so an install looks like that program and not like Crucible.</p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">A slow right read is still a sack, so the clock is part of the drill.</p>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Custom Racks: assign the exact look</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Coaches did not want a shuffled deck. They wanted the six defenses their quarterback sees on Friday. A rack freezes specific plays, no randomization, with a due date.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I cut the build to two steps because assigning is the part coaches abandon. Each rack reports back complete or pending per athlete.</p>
+        </div>
+
+        <figure style="margin:0">
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+            <video src="videos/crucible-stats.mp4" poster="images/crucible/dashboard-crop.png" data-clip-start="23.5" data-clip-end="37.5" autoplay muted loop playsinline preload="metadata" aria-label="Building a rack in the Crucible coach portal" style="width:100%;display:block"></video>
+          </div>
+          <figcaption style="padding-top:var(--space-3);font-size:14px;color:var(--text-secondary)">Build: pick the plays and coverages. Then review and assign.</figcaption>
+        </figure>
+        <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="70px,24px">Youth</x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">High School</x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="80px,24px">College</x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="60px,24px">Pro</x-import>
+          <span style="font-size:13px;color:var(--text-muted);padding-left:var(--space-2)">One rack, four levels of the same game</span>
+        </div>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Also mine</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--space-5)">
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">The athlete side</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">The player-facing half of the same data, written for someone who wants to know what to fix before Friday.</p>
+            </div>
+          </x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Login and accounts</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Sign-in, verification, password reset, and organization setup.</p>
+            </div>
+          </x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Seats, plans, and billing</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Seat selection, requests, plan changes, checkout. The revenue model is seat-based, so this is where the business lives.</p>
+            </div>
+          </x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">The marketing site</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Positioning, page structure, and copy for the site in the video above.</p>
+            </div>
+          </x-import>
+        </div>
+      </article>
+
+      <article>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="gradient" padding="40" hint-size="100%,220px">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:70ch">
+            <h2 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xxl);line-height:var(--leading-tight)">Outcome</h2>
+            <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4">Sales rose 45% once my additions shipped.</p>
+            <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Engineering rollout ran behind the design work, the trade you make at an early-stage company. Scoping for what the team can actually ship is part of the design, not a constraint on it.</p>
+          </div>
+        </x-import>
+      </article>
+
+    </section>
+
+    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+      <a href="https://www.crucibletech.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">crucibletech.com ↗</a>
+      <a href="#/work/vcs" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: VCS →</a>
+    </footer>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isVcs }}">
+  <main style="max-width:1000px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← All work</a>
+    <header style="padding:var(--space-5) 0 var(--space-7);display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="130px,24px">V Consulting Services</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="130px,24px">Marketing site · Brand</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="accent" hint-size="150px,24px">UX Designer · Tech Ops</x-import>
+      </div>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95">VCS</h1>
+      <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:62ch;text-wrap:pretty">VCS sells AI automation to two audiences with nothing in common: federal contracting officers and small business owners. I designed and built the site that has to convince both, then designed sites for their clients.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-5);padding-top:var(--space-4);border-top:1px solid var(--border-hairline)">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="2" label="Markets, one site" size="{{ 40 }}" accent="{{ true }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="8" label="Service pages" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="3" label="Client industries" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="1" label="Brand system" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+      </div>
+    </header>
+
+    <section data-spec="1" style="display:grid;grid-template-columns:160px minmax(0,1fr);gap:var(--space-4) var(--space-6);max-width:82ch;padding-bottom:var(--space-7);margin-bottom:var(--space-7);border-bottom:1px solid var(--border-hairline)">
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Role</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Technical Operations and UX Designer</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Responsibilities</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Site architecture, UX and UI, brand identity, content structure and search, build and technical operations, client site design</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Team</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Agency principals, plus client stakeholders across sports, hospitality, and legal</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Tools</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Figma, Adobe CC</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Timeline</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Aug to Dec 2025</p>
+    </section>
+
+
+    <figure style="margin:0 0 var(--space-8)">
+      <div style="position:relative;aspect-ratio:16/10;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+        <sc-for list="{{ vcsSlides }}" as="s" hint-placeholder-count="3">
+          <img src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy" style="{{ s.style }}">
+        </sc-for>
+        <button onClick="{{ vcsPrev }}" aria-label="Previous screen" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1px solid var(--border-subtle);background:rgba(13,13,13,.62);backdrop-filter:blur(6px);color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(13,13,13,.85)">‹</button>
+        <button onClick="{{ vcsNext }}" aria-label="Next screen" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1px solid var(--border-subtle);background:rgba(13,13,13,.62);backdrop-filter:blur(6px);color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(13,13,13,.85)">›</button>
+        <div style="position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px">
+          <sc-for list="{{ vcsDots }}" as="d" hint-placeholder-count="3">
+            <button onClick="{{ d.go }}" aria-label="{{ d.label }}" style="padding:10px 8px;margin:0;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:24px;min-height:28px">
+              <span style="{{ d.style }}"></span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+      <figcaption style="padding-top:var(--space-3);font-size:14px;color:var(--text-secondary)">{{ vcsCaption }}</figcaption>
+    </figure>
+
+    <section style="display:flex;flex-direction:column;gap:var(--space-8)">
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Two audiences, one front door</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">A contracting officer needs SAM.gov status and NIST alignment before anything else. A small business owner needs to hear that their website is costing them leads. Same company, opposite reasons to keep reading.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">So I split the navigation at the top level. Government and Small Business are peer paths with four services each, and the home page hands you off within one screen. The shared story comes after the split, where it reads as credibility instead of hedging.</p>
+        </div>
+
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="32" hint-size="100%,240px">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+            <span style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">The split</span>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-4)">
+              <div style="padding:var(--space-4);border-radius:var(--radius-md);background:var(--white-04);border:1px solid var(--border-hairline);display:flex;flex-direction:column;gap:10px">
+                <div style="font-family:var(--font-medium);font-size:15px">Government</div>
+                <div style="font-size:13px;color:var(--text-muted);line-height:1.5">AI Readiness · Agentic AI · Document Intelligence · AI Governance</div>
+                <div style="font-size:13px;color:var(--blue-450)">Proof first: certifications above the fold</div>
+              </div>
+              <div style="padding:var(--space-4);border-radius:var(--radius-md);background:var(--white-04);border:1px solid var(--border-hairline);display:flex;flex-direction:column;gap:10px">
+                <div style="font-family:var(--font-medium);font-size:15px">Small Business</div>
+                <div style="font-size:13px;color:var(--text-muted);line-height:1.5">Brand Strategy · Website Design · Workflow Automation · Managed Security</div>
+                <div style="font-size:13px;color:var(--blue-450)">Pain first: the cost of the workaround</div>
+              </div>
+            </div>
+          </div>
+        </x-import>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+        <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Selling a methodology, not a service list</h2>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The methodology is what makes VCS one company instead of two, so it gets the same visual weight as the services: four principles, short declarative blocks, landing before anyone reads a service description.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Zero dependency sits first, in the client's own words: you own the system, you run it without us.</p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">The differentiator gets the same real estate as the offer.</p>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+        <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Designed to be found</h2>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Both audiences start at search, so structure was a design problem. Every service is its own page rather than an anchor on a long scroll, and the FAQ answers the questions people actually type.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I handled the build and technical operations myself, so nothing drifted between design and implementation.</p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">A page per question people actually ask.</p>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">05</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Then the same work, for their clients</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Website design is one of the things VCS sells, so I designed sites for their clients across sports, hospitality, and legal. Three industries, three different buyers, each needing real brand identity rather than a template with their logo dropped in.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Client work sharpened one thing in particular: getting a non-designer to say what their business actually promises, then holding them to it when the design gets uncomfortable.</p>
+        </div>
+        <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="70px,24px">Sports</x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">Hospitality</x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="60px,24px">Legal</x-import>
+          <span style="font-size:13px;color:var(--text-muted);padding-left:var(--space-2)">Brand identity and site design per client</span>
+        </div>
+      </article>
+
+    </section>
+
+    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+      <a href="https://www.yourvcs.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">yourvcs.com ↗</a>
+      <a href="#/work/paladins" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Paladins →</a>
+    </footer>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isPaladins }}">
+  <main style="max-width:1000px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← All work</a>
+    <header style="padding:var(--space-5) 0 var(--space-7);display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">Hi-Rez Studios</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="140px,24px">PC / Console · Live service</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="accent" hint-size="130px,24px">Sole → Lead UI/UX Designer</x-import>
+      </div>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95">Paladins</h1>
+      <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:60ch;text-wrap:pretty">I joined a legacy live-service shooter as its only UX/UI designer and rebuilt the out-of-game experience so players could find things and finish what they started.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-5);padding-top:var(--space-4);border-top:1px solid var(--border-hairline)">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="7→3" label="Clicks to purchase" size="{{ 40 }}" accent="{{ true }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="30→7" unit="day" label="Login reward cycle" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="2→1" label="Quest systems, one screen" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="4" label="Shipped reworks" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+      </div>
+    </header>
+
+    <section data-spec="1" style="display:grid;grid-template-columns:160px minmax(0,1fr);gap:var(--space-4) var(--space-6);max-width:82ch;padding-bottom:var(--space-7);margin-bottom:var(--space-7);border-bottom:1px solid var(--border-hairline)">
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Role</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Sole UI/UX Designer, then Senior and team lead</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Responsibilities</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">UX, UI art, engine implementation, UI style guide, feature prioritization, milestone planning, mentorship</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Team</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Game designers, engineers, artists, and producers, plus outsource partners</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Tools</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Photoshop, Illustrator, After Effects, Unreal Engine, Perforce, Jira</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Timeline</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">May 2020 to Sept 2024</p>
+    </section>
+
+
+    <section style="display:flex;flex-direction:column;gap:var(--space-8)">
+
+      <article data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-6);align-items:center">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Store refactor &amp; inventory rework</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Monetization had been a long-standing problem: buying an item took seven clicks, four more than players expect anywhere else. I streamlined the purchase, added real inventory sorting, sped up the back end, and made the line between <em>owned</em> and <em>buyable</em> legible at a glance.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Shipped in the Siege: Beyond update.</p>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
+          <img src="https://static.wixstatic.com/media/5bd717_d9b421158c9b4f318378a44f3cceaf0b~mv2.png" alt="Paladins store refactor" loading="lazy" style="width:100%;display:block">
+        </div>
+      </article>
+
+      <article data-stack="1" data-stack-reverse="1" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
+        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
+          <img src="https://static.wixstatic.com/media/5bd717_7fb1626fd0a34e7db67f5da74e07f850~mv2.png" alt="Questing rework mockup" loading="lazy" style="width:100%;display:block">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Questing rework</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">An over-bloated system, split across two places. I merged daily quests with the eight-week questing track into a single screen, which cut new-player confusion and gave designers a system that stopped adding tech debt every patch.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">One screen for every quest a player owns.</p>
+        </div>
+      </article>
+
+      <article data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-6);align-items:center">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Daily login modernization</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The old month-long calendar punished you for missing a day. The new model compresses the chase into seven days and lets you claim on your own schedule, so the reward still pulls without the guilt.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">No more penalty for missing a day.</p>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
+          <img src="https://static.wixstatic.com/media/5bd717_d8e5daeaa9b64737a186561bd6ffad6b~mv2.png" alt="Daily login modernization" loading="lazy" style="width:100%;display:block">
+        </div>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">05</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Boutique champion UI</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Designed, implemented, and animated unique devices that track each champion's abilities. Engine restrictions meant no runtime animation, so every state was hand-animated as a PNG sequence.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-4)">
+          <div style="position:relative;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><video src="videos/paladins-champ-1.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Champion ability device, animated" style="width:100%;height:100%;object-fit:cover;display:block"></video></div>
+          <div style="position:relative;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><video src="videos/paladins-champ-2.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Champion ability device, animated" style="width:100%;height:100%;object-fit:cover;display:block"></video></div>
+          <div style="position:relative;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><video src="videos/paladins-champ-3.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Champion ability device, animated" style="width:100%;height:100%;object-fit:cover;display:block"></video></div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+      <a href="https://store.steampowered.com/app/444090/Paladins/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Paladins on Steam ↗</a>
+      <a href="#/work/smite-2" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Smite 2 →</a>
+    </footer>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isSmite }}">
+  <main style="max-width:1000px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← All work</a>
+    <header style="padding:var(--space-5) 0 var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">Hi-Rez Studios</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="140px,24px">PC / Console · Live service</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="accent" hint-size="110px,24px">System Designer</x-import>
+      </div>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95">Smite 2</h1>
+      <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:60ch;text-wrap:pretty">A third-person MOBA rebuilt in Unreal 5. Anything with a well-loved predecessor has to innovate without betraying the source, so the work was making systems clearer and more characterful at the same time.</p>
+    </header>
+
+    <section data-spec="1" style="display:grid;grid-template-columns:160px minmax(0,1fr);gap:var(--space-4) var(--space-6);max-width:82ch;padding-bottom:var(--space-7);margin-bottom:var(--space-7);border-bottom:1px solid var(--border-hairline)">
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Role</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Senior UI/UX Designer, system design</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Responsibilities</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">System design and implementation, boutique character ability UI, in-game ability quick view, resource-management legibility, themed UI</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Team</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Game designers, engineers, and artists</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Tools</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Figma, Adobe CC, Unreal Engine</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Timeline</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Jan 2024 to Sept 2024</p>
+    </section>
+
+    <figure style="margin:0 0 var(--space-8)">
+      <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+        <img src="https://static.wixstatic.com/media/5bd717_af0b751527fb43caa1c76f7a69c86aa0~mv2.avif" alt="Smite 2" loading="lazy" style="width:100%;display:block">
+      </div>
+    </figure>
+
+    <section style="display:flex;flex-direction:column;gap:var(--space-8)">
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Boutique character systems</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The original Smite had ability UI that was inconsistent from god to god and inefficient to read mid-fight. The rebuild had to make resource management unmistakable while pushing as much character-specific theming into it as the engine allowed.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Jing Wei's device below is one system in its states: base, then each bird charge, then the VFX shape. The theming is doing real work here, because the resource it tracks is the thing the player is watching for.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">In play, where it has to work: the devices read at a glance in the corner of the screen, mid-fight, without pulling the eye off the god.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Distinct per god, consistent as a system.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-4)">
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_7aad20e355424455bf3efbfcaa4b1e2a~mv2.png" alt="Jing Wei ability device, base state" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_12ac88b2b97a4ec0914e1cd119b98161~mv2.png" alt="Jing Wei ability device, one charge" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_32f8d58ee9f1455b857787e5965f02a5~mv2.png" alt="Jing Wei ability device, two charges" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_9463c01a3e8c4f73b56a6379a464b536~mv2.png" alt="Jing Wei ability device, three charges" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_cb0928ecb64f4f37a2c034828bc33c8f~mv2.png" alt="Jing Wei ability device, VFX shape" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+        </div>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:var(--space-4)">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4);width:72%;margin:0 auto">
+            <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+              <video src="videos/smite-solution.mp4" autoplay muted loop playsinline preload="none" aria-label="Themed ability devices in a live match" style="width:100%;display:block"></video>
+            </div>
+            <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+              <video src="videos/smite-nuwa.mp4" autoplay muted loop playsinline preload="none" aria-label="Nu Wa ability devices during play" style="width:100%;display:block"></video>
+            </div>
+          </div>
+        </figure>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">An ability quick view, in gameplay</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">MOBAs lean hard on recency memory: you are expected to remember what every ability does, on a character you may have picked up ten minutes ago. That tax falls hardest on new players, and on anyone trying a god for the first time.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I designed an in-match quick view that puts a digestible version of each ability description one glance away, with animation and highlight states making locked, upgradable, and upgraded abilities readable without stopping to parse text.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Less memory, more play.</p>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
+          <img src="https://static.wixstatic.com/media/5bd717_dd7543313fea42769378c35c14605faa~mv2.png" alt="In-game ability quick view" loading="lazy" style="width:100%;display:block">
+        </div>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
+        <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Designing against a beloved predecessor</h2>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">A sequel to a game people have played for a decade is a change-management problem as much as a design one. Every improvement is measured by returning players against the version living in their muscle memory.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">So the rule I worked to: fix what was genuinely inconsistent, keep what players already knew where to find, and spend the novelty budget on theming rather than on relocating things.</p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Innovate where it helps, stay familiar where it counts.</p>
+      </article>
+
+    </section>
+
+    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+      <a href="https://www.smite2.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">smite2.com ↗</a>
+      <a href="#/work/woz-magic-match" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Wizard of Oz →</a>
+    </footer>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isWoz }}">
+  <main style="max-width:1000px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← All work</a>
+    <header style="padding:var(--space-5) 0 var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="60px,24px">Zynga</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="120px,24px">Mobile · Live service</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="accent" hint-size="130px,24px">Designer · UI Artist</x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="130px,24px">2014 to 2019</x-import>
+      </div>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:clamp(34px,5.5vw,64px);line-height:.92;text-wrap:balance;max-width:14ch">Wizard of Oz<span style="opacity:.55">:</span> Magic Match</h1>
+      <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:62ch;text-wrap:pretty">A three-year-old match-3 title losing revenue every week, played mostly by women aged 45 to 60. Four programs over two years: two new features, a UI modernization that failed publicly before it worked, and an outsourcing pipeline built from nothing.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-5);padding-top:var(--space-4);border-top:1px solid var(--border-hairline)">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="6" unit="%" label="Card event" size="{{ 40 }}" accent="{{ true }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="5" unit="%" label="Retention feature" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="3" unit="%" label="Daily logins" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="82" unit="%" label="Women 45 to 60" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+      </div>
+    </header>
+
+    <section data-spec="1" style="display:grid;grid-template-columns:160px minmax(0,1fr);gap:var(--space-4) var(--space-6);max-width:82ch;padding-bottom:var(--space-7);margin-bottom:var(--space-7);border-bottom:1px solid var(--border-hairline)">
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Role</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">UX Designer and UI Artist</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Responsibilities</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">User research, flow charts, wireframes, interactive prototypes, FTUE design, UI art, RFP authoring, outsource direction</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Team</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">One designer, one artist, and one remote developer per feature, inside a team of two designers, two artists, and three developers</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Tools</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">InVision, Photoshop, Illustrator, After Effects, Unity, Jira</p>
+      <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);padding-top:4px">Timeline</span>
+      <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">May 2014 to Sept 2019</p>
+    </section>
+
+
+    <section style="display:flex;flex-direction:column;gap:var(--space-8)">
+
+      <article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-6);align-items:center" data-stack="1">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Daily retention, on the second attempt</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The team had already shipped a feature like this once and missed the target. Nobody had gone back to ask why. I did: message analytics and player conversations showed the instructions ran too long and read as work, and that players resented anything interrupting the core loop.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">So the rebuild stayed outside the loop and led with a character instead of a task list. On an aggressive deadline I cut the art cost to one pose and one face, changing costume and color per level, then carried that level color through the rest of the feature as a progress cue.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Up about 5% monetization and 3% logins within two weeks.</p>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
+          <img src="https://static.wixstatic.com/media/5bd717_97ebb09e88c0490b804f7bc915ed5efb~mv2.jpg" alt="Daily retention feature" loading="lazy" style="width:100%;display:block">
+        </div>
+      </article>
+
+      <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="32" hint-size="100%,220px">
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:74ch">
+          <span style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">A late requirement, solved without a flow hit</span>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">At final review, a stakeholder added a requirement that was not in the acceptance criteria and would not ship without it. It also broke the core flow, the one thing every piece of research said not to touch.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Rather than take the flow hit, I proposed an alternate ending animation that satisfied the request without adding a step. Our developer and I wireframed it the same day, got approval, and shipped on time. Afterward I added a flow-chart review with stakeholders to the process, so criteria stop appearing at the finish line.</p>
+        </div>
+      </x-import>
+
+      <article style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-6);align-items:center" data-stack="1" data-stack-reverse="1">
+        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
+          <img src="https://static.wixstatic.com/media/5bd717_d3089bf218a74f20b935d19183b6932b~mv2.jpg" alt="Card collection event" loading="lazy" style="width:100%;display:block">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">A card-collection event for an audience that hates complexity</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Stakeholders wanted a genuinely new kind of experience inside a game whose players were 82% women, most of them between 45 and 60. Card collection is a mechanic built by and for a very different audience, so the risk was obvious.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I audited the established players in that space, Elder Scrolls: Legends and Shards of Infinity among them, and played them daily for a week keeping my own notes so the wireframes argued from evidence. Post-its to whiteboard to flow chart to graybox, then art swapped in screen by screen.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Internal testing across teams outside QA said the instructions still confused people. I added an FTUE screen explaining duplicate cards, upsized assets, and animated every tappable element.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">About 6% monetization lift over the first limited run.</p>
+        </div>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:74ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">The modernization that had to fail first</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Year three, revenue sliding about 0.03% a week, and years of added features had left visual clutter that buried anything new. I stripped the decorative characters, moved the header up to read as progression, simplified copy, raised contrast, and deliberately left monetization exactly where players' thumbs already knew to find it.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">We launched it. Sales dropped. We reverted inside days and sales recovered, and the interviews explained why: players liked the new UI. They just did not want <em>their</em> screens changed.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">That reframed the whole problem from visual design to change management. New strategy: every new feature ships in the modern style, while existing core screens change only in small increments as players acclimate. The first feature built that way lifted daily users about 0.06% and monetization about 1.2%, and the core screens went onto a five-part roadmap across the following year.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">The redesign was right. The rollout was wrong, and that was mine to fix.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-4)">
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:9/16;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_ed19b893d7d84695a11b15165e487ecc~mv2.jpg" alt="Original UI before the pass" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:9/16;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_dff77340fd844db0b4498f77baf8dda5~mv2.jpg" alt="Old UI kept, copy simplified" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:9/16;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_2b5d4239135f44b9a96ea2782ee40fa9~mv2.jpg" alt="New UI, duplicated framing removed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        </div>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:74ch">
+        <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">05</span>
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Buying the team more hours</h2>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Two designers, two artists, three developers, new level content due every two weeks, and no documented process for any of it. I wrote the RFPs and ran the outsourcing myself.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I trialed two vendors against the same brief to see which asked questions when confused, built documentation that paired visuals with written instruction, and shipped a library of blank templates pre-set to the right ratios and guides so deliverables came back correct by default. Then a standing check-in cadence: they send progress, I send feedback, nobody discovers a problem at delivery.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Every miscommunication went back into the documentation. It ended up doubling as onboarding material for new hires.</p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Three weeks, six check-ins, content shipping without the internal team touching it.</p>
+      </article>
+
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:74ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">06</span>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Also at Zynga: Wizard of Oz and Willy Wonka Slots</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Alongside Magic Match I worked the studio's slots titles, the work that helped revive Zynga's Austin office.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-5)">
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Brand compliance</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Designed within licensor guidelines for two well-known IPs, clearing art and UI through client review without losing the game's own voice.</p>
+            </div>
+          </x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">VIP program</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Worked the highest-value player experience, the tier where design decisions move revenue directly.</p>
+            </div>
+          </x-import>
+          <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Pre-production strategy</h3>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Developed saleable concepts early enough to shape what got greenlit.</p>
+            </div>
+          </x-import>
+        </div>
+      </article>
+
+    </section>
+    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+      <a href="https://www.zynga.com/games/wizard-of-oz-magic-match/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Wizard of Oz: Magic Match ↗</a>
+      <a href="#/ui-design" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: UI Design →</a>
+    </footer>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isUi }}">
+  <main style="max-width:1140px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <header style="display:flex;flex-direction:column;gap:var(--space-4);padding-bottom:var(--space-7)">
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95">UI Design</h1>
+      <p style="margin:0;font-size:var(--text-md);color:var(--text-secondary);max-width:60ch;text-wrap:pretty">Graphics, icons, and hand-animated sequences made alongside the UX work. Click any image to open it full size.</p>
+    </header>
+
+    <section style="padding-bottom:var(--space-8)">
+      <h2 style="margin:0 0 var(--space-5);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">Graphics</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-4)">
+        <sc-for list="{{ graphics }}" as="g" hint-placeholder-count="12">
+          <a href="{{ g }}" target="_blank" rel="noopener" style="display:block;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:4/3;background:var(--ink-900)">
+            <img src="{{ g }}" alt="UI graphic" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" style-hover="opacity:.86">
+          </a>
+        </sc-for>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="margin:0 0 var(--space-5);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">Animation</h2>
+      <p style="margin:0 0 var(--space-5);color:var(--text-secondary);max-width:60ch">Ability-tracking devices for Paladins champions, hand-animated as PNG sequences because the engine allowed nothing else.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:var(--space-4)">
+        <sc-for list="{{ animations }}" as="a" hint-placeholder-count="5">
+          <a href="{{ a }}" target="_blank" rel="noopener" style="display:block;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)">
+            <img src="{{ a }}" alt="Animated UI device" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" style-hover="opacity:.86">
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isResume }}">
+  <main style="max-width:860px;margin:0 auto;padding:var(--space-8) var(--space-6)">
+    <div data-print="hide" style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap;padding-bottom:var(--space-6)">
+      <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">← Back to work</a>
+      <button onClick="{{ printResume }}" style="height:40px;padding:0 20px;border-radius:var(--radius-sm);border:1px solid var(--border-default);background:var(--ink-850);color:var(--text-primary);font-family:var(--font-body);font-size:14px;cursor:pointer" style-hover="background:var(--ink-800)">Print / save as PDF</button>
+    </div>
+
+    <header style="display:flex;flex-direction:column;gap:var(--space-3);padding-bottom:var(--space-6);border-bottom:1px solid var(--border-default)">
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(36px,5vw,56px);line-height:1">{{ r.name }}</h1>
+      <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg)">{{ r.title }}</p>
+      <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;font-size:14px;color:var(--text-secondary)">
+        <span>{{ r.location }}</span>
+        <a href="{{ telHref }}" style="color:var(--blue-500);text-decoration:none">{{ r.phone }}</a>
+        <a href="{{ mailtoHref }}" style="color:var(--blue-500);text-decoration:none">{{ r.email }}</a>
+        <sc-for list="{{ r.links }}" as="l" hint-placeholder-count="2">
+          <a href="{{ l.href }}" target="_blank" rel="noopener" style="color:var(--blue-500);text-decoration:none">{{ l.label }}</a>
+        </sc-for>
+      </div>
+    </header>
+
+    <p style="margin:var(--space-6) 0 0;font-size:var(--text-md);line-height:var(--leading-body);color:var(--text-secondary);max-width:70ch;text-wrap:pretty">{{ r.summary }}</p>
+
+    <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-5);padding:var(--space-6) 0;margin:var(--space-6) 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
+      <sc-for list="{{ r.stats }}" as="s" hint-placeholder-count="4">
+        <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="{{ s.value }}" unit="{{ s.unit }}" label="{{ s.label }}" size="{{ 40 }}" hint-size="100%,72px"></x-import>
+      </sc-for>
+    </section>
+
+    <section>
+      <h2 style="margin:0 0 var(--space-5);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">Experience</h2>
+      <div style="display:flex;flex-direction:column;gap:var(--space-6)">
+        <sc-for list="{{ r.experience }}" as="job" hint-placeholder-count="4">
+          <article style="display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-3)">
+            <div style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;align-items:baseline">
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">{{ job.company }}</h3>
+              <span style="font-size:14px;color:var(--text-muted)">{{ job.dates }}</span>
+            </div>
+            <p style="margin:0;font-size:15px;color:var(--blue-450)">{{ job.title }}</p>
+            <ul style="margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:var(--space-2);color:var(--text-secondary);line-height:var(--leading-body)">
+              <sc-for list="{{ job.bullets }}" as="b" hint-placeholder-count="3">
+                <li>{{ b }}</li>
+              </sc-for>
+            </ul>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="padding-top:var(--space-7)">
+      <h2 style="margin:0 0 var(--space-5);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">Education</h2>
+      <sc-for list="{{ r.education }}" as="ed" hint-placeholder-count="1">
+        <article style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;align-items:baseline">
+            <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">{{ ed.school }}</h3>
+            <span style="font-size:14px;color:var(--text-muted)">{{ ed.dates }}</span>
+          </div>
+          <p style="margin:0;font-size:15px;color:var(--blue-450)">{{ ed.credential }}</p>
+          <p style="margin:0;color:var(--text-secondary)">{{ ed.note }}</p>
+        </article>
+      </sc-for>
+    </section>
+
+    <section style="padding-top:var(--space-7)">
+      <h2 style="margin:0 0 var(--space-5);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">Skills</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-5)">
+        <sc-for list="{{ r.skillGroups }}" as="grp" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <span style="font-family:var(--font-medium);font-size:15px">{{ grp.label }}</span>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+              <sc-for list="{{ grp.items }}" as="it" hint-placeholder-count="5">
+                <span style="font-size:13px;padding:4px 10px;border-radius:var(--radius-pill);background:var(--white-04);border:1px solid var(--border-hairline);color:var(--text-secondary)">{{ it }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <footer data-print="hide" style="border-top:1px solid var(--border-hairline);margin-top:var(--space-8)">
+    <div style="max-width:1140px;margin:0 auto;padding:var(--space-6);display:flex;justify-content:space-between;gap:var(--space-5);flex-wrap:wrap;align-items:center">
+      <span style="font-size:14px;color:var(--text-muted)">Kam Seidl {{ year }}</span>
+      <div style="display:flex;gap:var(--space-5);flex-wrap:wrap">
+        <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Work</a>
+        <a href="#/bio" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Bio</a>
+        <!-- Hidden for now, not deleted. The #/ui-design route and blog.html both still work;
+             paste these two links back into the footer to bring them into the site.
+        <a href="#/ui-design" style="font-size:14px;color:var(--text-secondary);text-decoration:none">UI Design</a>
+        <a href="blog.html" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Blog</a>
+        -->
+        <a href="#/resume" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Resume</a>
+        <a href="mailto:kamseidl@gmail.com" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;palette&quot;: {
+    &quot;editor&quot;: &quot;enum&quot;,
+    &quot;options&quot;: [&quot;Teal &amp; Purple&quot;, &quot;Crucible Blue&quot;, &quot;Ember &amp; Sand&quot;, &quot;Mono Ink&quot;],
+    &quot;default&quot;: &quot;Teal &amp; Purple&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;section&quot;: &quot;Feel&quot;
+  },
+  &quot;density&quot;: {
+    &quot;editor&quot;: &quot;enum&quot;,
+    &quot;options&quot;: [&quot;Airy&quot;, &quot;Balanced&quot;, &quot;Compact&quot;],
+    &quot;default&quot;: &quot;Balanced&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;section&quot;: &quot;Feel&quot;
+  },
+  &quot;headlineVoice&quot;: {
+    &quot;editor&quot;: &quot;enum&quot;,
+    &quot;options&quot;: [&quot;Display italic caps&quot;, &quot;Clean modern&quot;],
+    &quot;default&quot;: &quot;Display italic caps&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;section&quot;: &quot;Feel&quot;
+  }
+}">
+const GRAPHICS = [
+  "5bd717_5ad1360e45f747229b02b9ec63d9b6f2~mv2.jpg",
+  "5bd717_c8734bc52a434e95a4deeb647167ef0f~mv2.jpg",
+  "5bd717_d3089bf218a74f20b935d19183b6932b~mv2.jpg",
+  "5bd717_97ebb09e88c0490b804f7bc915ed5efb~mv2.jpg",
+  "5bd717_e4695396c4164bc0ad1827c9fa673e67~mv2.jpg",
+  "5bd717_69759304e50d4b10a27f96d812486a68~mv2.jpg",
+  "5bd717_9c88935aaab44ac6a04a8c15f2ecb879~mv2.jpg",
+  "5bd717_6278fd16a1b341f2907a50bac313732b~mv2.jpg",
+  "5bd717_c4dedb8593f74e30877966814182e916~mv2.jpg",
+  "5bd717_d0cd4aec098f4259ba0cbc9f836b4d8b~mv2.png",
+  "5bd717_f21a5a12e88740bfa8add55979decdd6~mv2.png",
+  "5bd717_bd96c99b74104662b97d59073015dc41~mv2.png",
+  "5bd717_cd7f5e84fa44435cab18ce2eb2bb5db8~mv2.png",
+  "5bd717_eb0684f9bd584fd58efa9646cc1b5b68~mv2.png",
+  "5bd717_83d9cdca25854c8eacb2241b9d447f94~mv2.png"
+].map(f => "https://static.wixstatic.com/media/" + f);
+
+const ANIMATIONS = [
+  "5bd717_9907da71467948a5a1fc369e2c74868ef000.jpg",
+  "5bd717_e600712ca8b14c0291880a199cbd1701f000.jpg",
+  "5bd717_1ae84bbb108b40fd807a18080a4b4d95f000.jpg",
+  "5bd717_3e7495e8ab314b1eb7a73b9fca11020ef000.jpg",
+  "5bd717_8a3dbce700f540b5b2d0662659d52b52f000.jpg"
+].map(f => "https://static.wixstatic.com/media/" + f);
+
+const OI_SLIDES = [
+  { src: "images/crucible/offensive-info-vocabulary.png", alt: "Offensive Info vocabulary screen with term sets and learn or test toggles", caption: "Vocabulary. Each category carries its own sets and its own choice of learn or test; multi-select combines sets into one lesson." },
+  { src: "images/crucible/offensive-info-library.png", alt: "Offensive Info library of concept diagrams", caption: "The library sits behind the drills as reference, so a player can look the concept up instead of guessing." },
+  { src: "images/crucible/offensive-info-test.png", alt: "Timed test question showing a route diagram and four answer choices", caption: "Test mode. Diagram, four choices, 42 to get through." }
+];
+
+const VCS_SLIDES = [
+  { src: "images/vcs/site-home.png", alt: "VCS home page hero", caption: "Home. The two audience paths sit side by side, with the certifications a contracting officer looks for pinned directly beneath them." },
+  { src: "images/vcs/site-why.png", alt: "VCS methodology section", caption: "The methodology, given the same weight as the services. Zero Dependency leads." },
+  { src: "images/vcs/site-about.png", alt: "VCS about page", caption: "About. One promise, stated plainly, before any capability list." }
+];
+
+const PALETTES = {
+  "Teal & Purple": { accent: "#2dd4bf", bright: "#5eead4", deep: "#14b8a6", second: "#a855f7", surface: "#2e1a4d", surface2: "#4c2a7a", light: "#0f766e" },
+  "Crucible Blue": { accent: "#0a8afe", bright: "#0abafe", deep: "#1a8cd8", second: "#0c4b70", surface: "#082735", surface2: "#0c4b70", light: "#0761b8" },
+  "Ember & Sand":  { accent: "#ff7a45", bright: "#ffa273", deep: "#e2562a", second: "#d4a373", surface: "#3b241a", surface2: "#6b3a22", light: "#b23c14" },
+  "Mono Ink":      { accent: "#d4d4d8", bright: "#fafafa", deep: "#a1a1aa", second: "#71717a", surface: "#1c1c1f", surface2: "#2b2b30", light: "#3f3f46" }
+};
+
+const rgba = (hex, a) => {
+  const h = hex.replace("#", "");
+  const n = parseInt(h.length === 3 ? h.split("").map(c => c + c).join("") : h, 16);
+  return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
+};
+
+class Component extends DCLogic {
+  state = {
+    vcsSlide: 0,
+    oiSlide: 0,
+    route: (typeof location !== "undefined" ? location.hash.replace(/^#/, "") : "") || "/",
+    theme: "dark",
+    open: {},
+    tick: 0
+  };
+
+  componentDidMount() {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-in");
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    const tagAndObserve = (el) => {
+      if (el.dataset.revealed) return;
+      el.dataset.revealed = "1";
+      el.classList.add("reveal-clip");
+      revealObserver.observe(el);
+    };
+    document.querySelectorAll("main h2").forEach(tagAndObserve);
+    const revealMo = new MutationObserver(() => {
+      document.querySelectorAll("main h2").forEach(tagAndObserve);
+    });
+    revealMo.observe(document.body, { childList: true, subtree: true });
+    this._revealObserver = revealObserver;
+    this._revealMo = revealMo;
+    this._onHash = () => {
+      this.setState({ route: location.hash.replace(/^#/, "") || "/" });
+      if (typeof window !== "undefined") window.scrollTo(0, 0);
+    };
+    window.addEventListener("hashchange", this._onHash);
+    let theme = "dark";
+    try { theme = localStorage.getItem("kam-theme") || "dark"; } catch (e) {}
+    this.applyTheme(theme);
+    this.setState({ theme });
+    this.applyTweaks();
+    this.primeVideos();
+    setTimeout(() => this.primeVideos(), 300);
+    const calm = typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!calm) {
+      this._slideTimer = setInterval(() => {
+        if (this._slideHeld) return;
+        if (this.state.route === "/work/vcs") this.setState(s => ({ vcsSlide: (s.vcsSlide + 1) % VCS_SLIDES.length }));
+        if (this.state.route === "/work/crucible") this.setState(s => ({ oiSlide: (s.oiSlide + 1) % OI_SLIDES.length }));
+      }, 5200);
+    }
+    // content/resume.js loads from the document head; wait for it if it is not in yet.
+    if (!window.KAM_RESUME) {
+      let n = 0;
+      this._poll = setInterval(() => {
+        n++;
+        if (window.KAM_RESUME || n > 40) {
+          clearInterval(this._poll);
+          this.setState(s => ({ tick: s.tick + 1 }));
+        }
+      }, 60);
+    }
+  }
+
+  goSlide(i, manual) {
+    if (manual) this._slideHeld = true;
+    this.setState({ vcsSlide: (i + VCS_SLIDES.length) % VCS_SLIDES.length });
+  }
+
+  goOiSlide(i, manual) {
+    if (manual) this._slideHeld = true;
+    this.setState({ oiSlide: (i + OI_SLIDES.length) % OI_SLIDES.length });
+  }
+
+  componentWillUnmount() {
+    if (this._slideTimer) clearInterval(this._slideTimer);
+    window.removeEventListener("hashchange", this._onHash);
+    if (this._poll) clearInterval(this._poll);
+  }
+
+  applyTheme(theme) {
+    if (typeof document !== "undefined") document.body.setAttribute("data-theme", theme);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.applyTweaks();
+    // Only re-sweep media when the route actually changed — otherwise the VCS
+    // slideshow's 5.2s setState would restart every video on the page.
+    if (!prevState || prevState.route !== this.state.route) this.primeVideos();
+  }
+
+  // React never reflects `muted` to the DOM property, and an unmuted video is
+  // blocked by autoplay policy — so set the properties directly.
+  primeVideos() {
+    if (typeof document === "undefined") return;
+    const still = typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelectorAll("video").forEach(v => {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.playsInline = true;
+
+      // A data-clip window trims a long capture to a loop without re-encoding.
+      const a = parseFloat(v.dataset.clipStart);
+      const b = parseFloat(v.dataset.clipEnd);
+      const clipped = !isNaN(a) && !isNaN(b) && b > a;
+      v.loop = !clipped;
+
+      if (!v._clipBound) {
+        v._clipBound = true;
+        const FADE = 0.4;
+        v.style.transition = "opacity " + FADE + "s ease";
+        const end = () => (clipped ? b : (v.duration || 0));
+        const start = () => (clipped ? a : 0);
+
+        v.addEventListener("timeupdate", () => {
+          const t = v.currentTime, e = end();
+          if (!e) return;
+          if (t >= e - FADE && !v._fading) { v._fading = true; v.style.opacity = "0"; }
+          if (clipped && (t >= e || t < start() - 0.1)) v.currentTime = start();
+        });
+        // Fading back in once the new frame is actually decoded avoids a flash.
+        const restore = () => {
+          if (v.currentTime < start() + 0.5 && v._fading) { v._fading = false; v.style.opacity = "1"; }
+        };
+        v.addEventListener("seeked", restore);
+        v.addEventListener("timeupdate", restore);
+        v.addEventListener("loadedmetadata", () => { if (clipped) v.currentTime = a; });
+        if (clipped && v.readyState >= 1) v.currentTime = a;
+      }
+
+      if (still) { v.pause(); return; }
+      // play() forces a fetch even with preload="none", so never call it on a
+      // video that isn't actually rendered on the current route.
+      if (v.offsetParent === null) { v.pause(); return; }
+      const p = v.play();
+      if (p && p.catch) p.catch(() => {});
+    });
+  }
+
+  applyTweaks() {
+    if (typeof document === "undefined") return;
+    const b = document.body;
+    const p = this.props || {};
+    const P = PALETTES[p.palette] || PALETTES["Teal & Purple"];
+    const dark = this.state.theme === "dark";
+    const accent = dark ? P.accent : P.light;
+    const bright = dark ? P.bright : P.light;
+
+    const h = accent.replace("#", "");
+    const n = parseInt(h.length === 3 ? h.split("").map(c => c + c).join("") : h, 16);
+    const lum = (0.299 * ((n >> 16) & 255) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255;
+
+    const vars = {
+      "--on-accent": lum > 0.6 ? "#0d0d0d" : "#ffffff",
+      "--blue-500": accent,
+      "--blue-450": bright,
+      "--blue-700": dark ? P.deep : P.light,
+      "--text-accent": accent,
+      "--blue-tint-08": rgba(accent, 0.10),
+      "--blue-tint-12": rgba(bright, 0.14),
+      "--blue-tint-15": rgba(accent, 0.12),
+      "--purple-500": P.second,
+      "--navy-900": P.surface,
+      "--navy-800": P.surface2,
+      "--navy-750": P.surface,
+      "--navy-700": P.surface2,
+      "--grad-border-blue": `linear-gradient(45deg, #5d5d5d 0%, ${P.accent} 20%, ${P.second} 80%, #5d5d5d 100%)`,
+      "--grad-button-edge": `linear-gradient(45deg, #fff 0%, ${P.accent} 30%, ${P.second} 70%, #fff 100%)`,
+      "--grad-pill-edge": `linear-gradient(160deg, #5d5d5d 0%, ${P.accent} 64%, #494949 100%)`,
+      "--grad-pill-fill": `linear-gradient(90deg, ${P.surface} 0%, #12171c 100%)`,
+    };
+    for (const k in vars) b.style.setProperty(k, vars[k]);
+
+    b.setAttribute("data-density", String(p.density || "Balanced").toLowerCase());
+    b.setAttribute("data-voice", String(p.headlineVoice || "").indexOf("Clean") === 0 ? "clean" : "display");
+  }
+
+  toggleTheme = () => {
+    const theme = this.state.theme === "dark" ? "light" : "dark";
+    this.applyTheme(theme);
+    try { localStorage.setItem("kam-theme", theme); } catch (e) {}
+    this.setState({ theme });
+  };
+
+  toggle(i) {
+    this.setState(s => ({ open: Object.assign({}, s.open, { [i]: !s.open[i] }) }));
+  }
+
+  renderVals() {
+    const route = this.state.route;
+    const r = window.KAM_RESUME || { links: [], stats: [], experience: [], skillGroups: [], education: [] };
+    const known = ["/bio", "/ui-design", "/resume", "/work/crucible", "/work/vcs", "/work/paladins", "/work/smite-2", "/work/woz-magic-match"];
+    const isHome = !known.includes(route);
+
+    return {
+      year: new Date().getFullYear(),
+      isDark: this.state.theme === "dark",
+      isLight: this.state.theme !== "dark",
+      toggleTheme: this.toggleTheme,
+      printResume: () => window.print(),
+
+      isHome,
+      isBio: route === "/bio",
+      isUi: route === "/ui-design",
+      isResume: route === "/resume",
+      isCrucible: route === "/work/crucible",
+      isVcs: route === "/work/vcs",
+      isPaladins: route === "/work/paladins",
+      isSmite: route === "/work/smite-2",
+      isWoz: route === "/work/woz-magic-match",
+
+      vcsSlides: VCS_SLIDES.map((s, i) => ({
+        src: s.src,
+        alt: s.alt,
+        style: "position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:block;"
+          + "transition:opacity .55s ease;opacity:" + (i === this.state.vcsSlide ? "1" : "0")
+      })),
+      vcsDots: VCS_SLIDES.map((s, i) => ({
+        label: "Show screen " + (i + 1),
+        go: () => this.goSlide(i, true),
+        style: "display:block;width:" + (i === this.state.vcsSlide ? "24px" : "8px") + ";height:8px;border-radius:999px;"
+          + "transition:width .3s ease, background .3s ease;background:"
+          + (i === this.state.vcsSlide ? "var(--blue-450)" : "rgba(255,255,255,.42)")
+      })),
+      vcsCaption: (VCS_SLIDES[this.state.vcsSlide] || {}).caption || "",
+      vcsPrev: () => this.goSlide(this.state.vcsSlide - 1, true),
+      vcsNext: () => this.goSlide(this.state.vcsSlide + 1, true),
+
+      oiSlides: OI_SLIDES.map((s, i) => ({
+        src: s.src,
+        alt: s.alt,
+        style: "position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;"
+          + "transition:opacity .55s ease;opacity:" + (i === this.state.oiSlide ? "1" : "0")
+      })),
+      oiDots: OI_SLIDES.map((s, i) => ({
+        label: "Show screen " + (i + 1),
+        go: () => this.goOiSlide(i, true),
+        style: "display:block;width:" + (i === this.state.oiSlide ? "24px" : "8px") + ";height:8px;border-radius:999px;"
+          + "transition:width .3s ease, background .3s ease;background:"
+          + (i === this.state.oiSlide ? "var(--blue-450)" : "rgba(255,255,255,.42)")
+      })),
+      oiCaption: (OI_SLIDES[this.state.oiSlide] || {}).caption || "",
+      oiPrev: () => this.goOiSlide(this.state.oiSlide - 1, true),
+      oiNext: () => this.goOiSlide(this.state.oiSlide + 1, true),
+
+      graphics: GRAPHICS,
+      animations: ANIMATIONS,
+
+      r,
+      mailtoHref: "mailto:" + (r.email || ""),
+      telHref: "tel:" + String(r.phone || "").replace(/[^0-9+]/g, ""),
+
+      t0Open: !!this.state.open[0],
+      t1Open: !!this.state.open[1],
+      t2Open: !!this.state.open[2],
+      t0Label: this.state.open[0] ? "Hide full recommendation" : "Read full recommendation",
+      t1Label: this.state.open[1] ? "Hide full recommendation" : "Read full recommendation",
+      t2Label: this.state.open[2] ? "Hide full recommendation" : "Read full recommendation",
+      toggleT0: () => this.toggle(0),
+      toggleT1: () => this.toggle(1),
+      toggleT2: () => this.toggle(2)
+    };
+  }
+}
+</script>
+</body>
+</html>
