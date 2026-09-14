@@ -286,7 +286,8 @@
             </div>
           </div>
         </a>
-        <a href="#/work/vcs" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
+        <!-- VCS hidden for now -->
+        <div style="display:none">
           <div data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
             <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
               <div style="position:relative;width:100%;height:100%;background:#2e1a4d">
@@ -313,30 +314,11 @@
               <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
             </div>
           </div>
-        </a>
+        </div>
       </div>
 
       <span style="display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);margin:var(--space-7) 0 var(--space-5)">Games</span>
       <div style="display:flex;flex-direction:column">
-        <a href="#/work/paladins" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
-          <div data-stack="1" data-stack-reverse="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
-            <div data-worktext="1" style="display:flex;flex-direction:column;gap:var(--space-3)">
-              <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
-                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">Hi-Rez Studios</x-import>
-                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">PC / Console</x-import>
-                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="80px,24px">Live service</x-import>
-              </div>
-              <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xl);line-height:1.1">Paladins</h3>
-              <p style="margin:0;font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-450)">Sole → Lead UI/UX · Retention · Monetization</p>
-              <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Rebuilt the out-of-game experience of a nine-year live shooter: store, inventory, quests, daily login, and per-champion HUDs.</p>
-              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Cut the 7-click purchase flow, four clicks above the genre standard.</p>
-              <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
-            </div>
-            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
-              <video src="videos/paladins.mp4" poster="https://static.wixstatic.com/media/5bd717_7a966100247840b98500f2c81f6efe20f001.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Paladins out-of-game UI" style="width:100%;height:100%;object-fit:cover;display:block"></video>
-            </div>
-          </div>
-        </a>
         <a href="#/work/smite-2" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
           <div data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
             <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
@@ -356,8 +338,30 @@
             </div>
           </div>
         </a>
-        <a href="#/work/woz-magic-match" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
+        <a href="#/work/paladins" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
           <div data-stack="1" data-stack-reverse="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
+            <div data-worktext="1" style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">Hi-Rez Studios</x-import>
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="90px,24px">PC / Console</x-import>
+                <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="80px,24px">Live service</x-import>
+              </div>
+              <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xl);line-height:1.1">Paladins</h3>
+              <p style="margin:0;font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-450)">Sole → Lead UI/UX · Retention · Monetization</p>
+              <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Rebuilt the out-of-game experience of a nine-year live shooter: store, inventory, quests, daily login, and per-champion HUDs.</p>
+              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Cut the 7-click purchase flow, four clicks above the genre standard.</p>
+              <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
+            </div>
+            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
+              <video src="videos/paladins.mp4" poster="https://static.wixstatic.com/media/5bd717_7a966100247840b98500f2c81f6efe20f001.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Paladins out-of-game UI" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+            </div>
+          </div>
+        </a>
+        <a href="#/work/woz-magic-match" data-workrow="1" style="text-decoration:none;color:inherit;display:block">
+          <div data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
+            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
+              <video src="videos/woz.mp4" poster="https://static.wixstatic.com/media/5bd717_d3089bf218a74f20b935d19183b6932b~mv2.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Wizard of Oz: Magic Match" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+            </div>
             <div data-worktext="1" style="display:flex;flex-direction:column;gap:var(--space-3)">
               <div style="display:flex;gap:var(--space-2);flex-wrap:wrap">
                 <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="60px,24px">Zynga</x-import>
@@ -369,9 +373,6 @@
               <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Four programs on a declining match-3 title: two new features, a UI modernization, and an outsourcing pipeline.</p>
               <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Includes the redesign that failed, and what I did next.</p>
               <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
-            </div>
-            <div style="border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-900);border:1px solid var(--border-hairline)">
-              <video src="videos/woz.mp4" poster="https://static.wixstatic.com/media/5bd717_d3089bf218a74f20b935d19183b6932b~mv2.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Wizard of Oz: Magic Match" style="width:100%;height:100%;object-fit:cover;display:block"></video>
             </div>
           </div>
         </a>
@@ -806,7 +807,7 @@
 
     <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
       <a href="https://www.crucibletech.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">crucibletech.com ↗</a>
-      <a href="#/work/vcs" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: VCS →</a>
+      <a href="#/work/smite-2" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Smite 2 →</a>
     </footer>
   </main>
   </sc-if>
@@ -1027,7 +1028,7 @@
 
     <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
       <a href="https://store.steampowered.com/app/444090/Paladins/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Paladins on Steam ↗</a>
-      <a href="#/work/smite-2" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Smite 2 →</a>
+      <a href="#/work/woz-magic-match" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Wizard of Oz →</a>
     </footer>
   </main>
   </sc-if>
@@ -1122,7 +1123,7 @@
 
     <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
       <a href="https://www.smite2.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">smite2.com ↗</a>
-      <a href="#/work/woz-magic-match" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Wizard of Oz →</a>
+      <a href="#/work/paladins" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Paladins →</a>
     </footer>
   </main>
   </sc-if>
