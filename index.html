@@ -202,7 +202,19 @@
   }
   @media (max-width: 600px) {
     main { padding-left: 20px !important; padding-right: 20px !important; }
-    header[data-nav] { padding-left: 16px !important; padding-right: 16px !important; height: auto !important; min-height: 72px; padding-top: 12px !important; padding-bottom: 12px !important; flex-wrap: wrap; }
+    header[data-nav] { padding-left: 16px !important; padding-right: 16px !important; height: auto !important; min-height: 72px; padding-top: 12px !important; padding-bottom: 12px !important; flex-wrap: wrap; gap: 8px 18px !important; }
+    header[data-nav] > a:first-child { margin-right: auto; }
+    header[data-nav] nav { display: contents !important; }
+    header[data-nav] nav > button, header[data-nav] nav > a[href="#/resume"] { order: 1; }
+    header[data-nav]::after { content: ""; order: 2; flex-basis: 100%; height: 0; }
+    header[data-nav] nav > a:not([href="#/resume"]) { order: 3; padding: 8px 0 !important; }
+    [data-lb-frame] { width: calc(100vw - 32px) !important; height: calc(100vh - 180px) !important; }
+    [data-lb-arrow] { position: absolute !important; bottom: 16px; width: 64px !important; height: 64px !important; }
+    [data-lb-arrow="prev"] { left: 16px; }
+    [data-lb-arrow="next"] { right: 16px; }
+    [data-animwide] { height: auto !important; width: 100% !important; }
+    [data-animrow] { padding-inline: 0 !important; gap: var(--space-3) !important; }
+    [data-animsq] { height: auto !important; flex: 1 1 0 !important; min-width: 0; aspect-ratio: 1; }
   }
   @media print {
     body { background: #fff !important; }
@@ -223,6 +235,7 @@
     <nav style="display:flex;align-items:center;gap:var(--space-5);margin-left:auto;flex-wrap:wrap;justify-content:flex-end">
       <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent" style-hover="color:var(--text-primary);border-bottom-color:var(--blue-500)">Work</a>
       <a href="#/bio" style="font-size:14px;color:var(--text-secondary);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent" style-hover="color:var(--text-primary);border-bottom-color:var(--blue-500)">Bio</a>
+      <a href="#/ui-design" style="font-size:14px;color:var(--text-secondary);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent" style-hover="color:var(--text-primary);border-bottom-color:var(--blue-500)">Visual Design</a>
       <a href="mailto:kamseidl@gmail.com" style="font-size:14px;color:var(--text-secondary);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent" style-hover="color:var(--text-primary);border-bottom-color:var(--blue-500)">Contact</a>
       <button onClick="{{ toggleTheme }}" title="Toggle light and dark" style="width:36px;height:36px;border-radius:var(--radius-sm);border:1px solid var(--border-default);background:var(--white-04);color:var(--text-secondary);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-family:var(--font-body);transition:var(--transition)" style-hover="background:var(--white-08);color:var(--text-primary)">
         <sc-if value="{{ isDark }}" hint-placeholder-val="{{ true }}">
@@ -249,7 +262,7 @@
         </div>
         <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(38px,9vw,84px);line-height:.95;letter-spacing:-.01em;color:color-mix(in srgb, var(--text-primary) 82%, var(--text-secondary));clip-path:inset(0 0 0 0);animation:clipRevealX .9s cubic-bezier(.65,0,.35,1) .1s both">Kam Seidl</h1>
         <p class="hero-fade" style="margin:0;font-size:var(--text-md);line-height:var(--leading-body);color:var(--text-secondary);max-width:58ch;text-wrap:pretty;animation-delay:.22s">Thirteen years across live-service games, SaaS platforms, mobile titles, and client work. A shooter played by millions, a quarterback training platform, slots built under licensor review, a consultancy selling to federal agencies and small businesses at once.</p>
-        <p class="hero-fade" style="margin:0;font-size:var(--text-md);line-height:var(--leading-body);color:var(--text-primary);font-weight:600;max-width:58ch;text-wrap:pretty;animation-delay:.34s">What carries between them is not a style. It is a habit: find the goal, find what's getting in its way, and clear the path.</p>
+        <p class="hero-fade" style="margin:0;font-size:var(--text-md);line-height:var(--leading-body);color:var(--text-primary);font-weight:600;max-width:58ch;text-wrap:pretty;animation-delay:.34s">The constant across all of it is how I work: find the goal, find what's in the way, and remove it.</p>
       </div>
     </section>
 
@@ -310,7 +323,7 @@
               <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xl);line-height:1.1">VCS</h3>
               <p style="margin:0;font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-450)">UX / UI · Brand identity · Client sites</p>
               <p style="margin:0;font-size:15px;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Custom sites for multiple audiences, brand identity, site assets, and custom tools and AI built in wherever the client needed them.</p>
-              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Every client got a site built for their own brand, not a template with their logo on it.</p>
+              <p style="margin:0;font-size:15px;color:var(--text-primary);font-family:var(--font-medium)">Each client got a site designed around their own brand.</p>
               <span style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium)">View case study →</span>
             </div>
           </div>
@@ -427,11 +440,11 @@
         <img src="https://static.wixstatic.com/media/5bd717_aab884eecf954f50978060e4815d563f~mv2.jpg" alt="Kam Seidl" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="display:flex;flex-direction:column;gap:var(--space-4)">
-        <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;text-wrap:pretty">Every product I have worked on has been someone else's world: a casino floor, a card game's economy, a quarterback's film study. What travels with me between them is the same instinct, figure out what the person using it actually needs, fast.</p>
+        <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;text-wrap:pretty">I've designed for casino floors, card game economies, and quarterback film study. Each time, my first job was the same: figure out what the person using it needs, quickly.</p>
         <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Thirteen years of it. Seven in web and PC, six in mobile, across industries that share almost nothing.</p>
         <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Live titles with fixed ship dates taught me to plan the day a project is approved and to work agile beside the engineers building it. I have led a team and I have been the only designer in the room, and I am better for having done both.</p>
-        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">When a domain is new to me, I learn enough to be useful and ask the people who live in it for the rest. That is how a designer who had never called a play ended up designing how quarterbacks study.</p>
-        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Lately that means carrying what games taught me about attention, motivation, and clarity into SaaS. Scientific Games, Caesars, Zynga, Hi-Rez, and most recently Crucible.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">When a domain is new to me, I learn enough to be useful and ask the people who live in it for the rest. I had never called a football play before Crucible; the coaches and players filled in what I didn't know.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Most recently I've been applying what I learned in games to SaaS. Past teams include Scientific Games, Caesars, Zynga, Hi-Rez, and Crucible.</p>
         <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;padding-top:var(--space-2)">
           <a href="#/resume" style="text-decoration:none">
             <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Button" variant="primary" glow="{{ true }}" hint-size="120px,40px">Full resume</x-import>
@@ -632,7 +645,7 @@
       <article style="display:flex;flex-direction:column;gap:var(--space-5)">
         <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
-          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Offensive Info: flashcards, not coursework</h2>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Offensive Info: play recognition as flashcards</h2>
           <p style="margin:0;color:var(--text-primary);line-height:var(--leading-body);text-wrap:pretty">Our user base had a wide range of understanding, from zero football knowledge to pros. I pulled play recognition into its own flashcard system, built to flex with however much a player needed.</p>
         </div>
 
@@ -733,7 +746,7 @@
                 </div>
                 <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Two ways to build a lesson</h3>
               </div>
-              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Two levels of trust in one flow: Normal mode pulls from plays a coach already chose, Expert mode opens the full library.</p>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Normal mode pulls from plays a coach already chose, Expert mode opens the full library.</p>
             </div>
           </x-import>
           <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
@@ -755,7 +768,7 @@
                 </div>
                 <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Order is teaching</h3>
               </div>
-              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Coaches set their own teaching order, since sequence is part of the lesson, not mine to assume.</p>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Coaches set their own teaching order, because the order plays are taught in is a coaching decision.</p>
             </div>
           </x-import>
         </div>
@@ -798,16 +811,19 @@
           <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:70ch">
             <h2 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:var(--text-xxl);line-height:var(--leading-tight)">Outcome</h2>
             <p style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4">Sales rose 45% once my additions shipped.</p>
-            <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Engineering rollout ran behind the design work, the trade you make at an early-stage company. Scoping for what the team can actually ship is part of the design, not a constraint on it.</p>
+            <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Engineering rollout ran behind the design work, the trade you make at an early-stage company. I scoped the designs to what the team could build at the time.</p>
           </div>
         </x-import>
       </article>
 
     </section>
 
-    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+    <footer style="display:flex;flex-direction:column;gap:var(--space-5);padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
       <a href="https://www.crucibletech.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">crucibletech.com ↗</a>
-      <a href="#/work/smite-2" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Smite 2 →</a>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap">
+        <span></span>
+        <a href="#/work/smite-2" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Smite 2 →</a>
+      </div>
     </footer>
   </main>
   </sc-if>
@@ -869,9 +885,9 @@
         <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Two audiences, one front door</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">A contracting officer needs SAM.gov status and NIST alignment before anything else. A small business owner needs to hear that their website is costing them leads. Same company, opposite reasons to keep reading.</p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">So I split the navigation at the top level. Government and Small Business are peer paths with four services each, and the home page hands you off within one screen. The shared story comes after the split, where it reads as credibility instead of hedging.</p>
-          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">The alternative was one shared homepage speaking to both, which is the default for a merged brand. I decided that reads as hedging to both audiences rather than confidence to either.</span></p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">A contracting officer needs SAM.gov status and NIST alignment before anything else. A small business owner needs to hear that their website is costing them leads. The site had to work for both.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">So I split the navigation at the top level. Government and Small Business are peer paths with four services each, and the home page hands you off within one screen. The shared company story comes after the split.</p>
+          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">The alternative was one shared homepage speaking to both, which is the default for a merged brand. I ruled it out because neither audience would have found its own concerns up front.</span></p>
         </div>
 
         <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="32" hint-size="100%,240px">
@@ -895,29 +911,29 @@
 
       <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
         <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
-        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Selling a methodology, not a service list</h2>
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Leading with the methodology</h2>
         <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The methodology is what makes VCS one company instead of two, so it gets the same visual weight as the services: four principles, short declarative blocks, landing before anyone reads a service description.</p>
         <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Zero dependency sits first, in the client's own words: you own the system, you run it without us.</p>
-        <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">I gave the methodology the same visual weight as the service list rather than letting it trail as supporting copy. A differentiator that reads as an afterthought reads as no differentiator at all.</span></p>
-        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">The differentiator gets the same real estate as the offer.</p>
+        <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">It's the main thing that sets VCS apart from competitors, so I kept it from being buried below the services as supporting copy.</span></p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Methodology and services get equal weight.</p>
       </article>
 
       <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
         <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
         <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Designed to be found</h2>
-        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Both audiences start at search, so structure was a design problem. Every service is its own page rather than an anchor on a long scroll, and the FAQ answers the questions people actually type.</p>
-        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I handled the build and technical operations myself, so nothing drifted between design and implementation.</p>
-        <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">Owning both meant slower iteration on my own time. I made that trade deliberately, to keep design intent and shipped page from drifting apart.</span></p>
-        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">A page per question people actually ask.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Both audiences start at search, so structure was a design problem. Every service is its own page rather than an anchor on a long scroll, and the FAQ is written around real search queries.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I handled the build and technical operations myself.</p>
+        <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">Owning both meant slower iteration, which I accepted to keep the build matching the design.</span></p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">One page per service, built for search.</p>
       </article>
 
       <article style="display:flex;flex-direction:column;gap:var(--space-5)">
         <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">05</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Then the same work, for their clients</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Website design is one of the things VCS sells, so I designed sites for their clients across sports, hospitality, and legal. Three industries, three different buyers, each needing real brand identity rather than a template with their logo dropped in.</p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Client work sharpened one thing in particular: getting a non-designer to say what their business actually promises, then holding them to it when the design gets uncomfortable.</p>
-          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">Holding that line sometimes meant pushing back on a client's own first instinct for their brand, when the promise they wanted to make and the one their business could actually keep were not the same thing.</span></p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Website design is one of the things VCS sells, so I designed sites for their clients across sports, hospitality, and legal. Three industries, three different buyers, each needing its own brand identity.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The hardest part of client work was getting each owner to state clearly what their business promises, then designing to that.</p>
+          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">Sometimes that meant pushing back on a client's first idea for their brand when it promised more than the business could deliver.</span></p>
         </div>
         <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
           <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="70px,24px">Sports</x-import>
@@ -929,9 +945,12 @@
 
     </section>
 
-    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+    <footer style="display:flex;flex-direction:column;gap:var(--space-5);padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
       <a href="https://www.yourvcs.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">yourvcs.com ↗</a>
-      <a href="#/work/paladins" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Paladins →</a>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap">
+        <a href="#/work/crucible" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">← Previous: Crucible</a>
+        <a href="#/work/paladins" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Paladins →</a>
+      </div>
     </footer>
   </main>
   </sc-if>
@@ -947,7 +966,7 @@
         <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="accent" hint-size="130px,24px">Sole → Lead UI/UX Designer</x-import>
       </div>
       <h1 class="hero-fade" style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95;animation-delay:.12s">Paladins</h1>
-      <p class="hero-fade" style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:60ch;text-wrap:pretty;animation-delay:.22s">I joined a legacy live-service shooter as its only UX/UI designer and rebuilt the out-of-game experience so players could find things and finish what they started.</p>
+      <p class="hero-fade" style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:60ch;text-wrap:pretty;animation-delay:.22s">I joined a legacy live-service shooter as its only UX/UI designer and redesigned the menus and systems outside of matches so players could find what they were looking for.</p>
       <div class="hero-fade" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-5);padding-top:var(--space-4);border-top:1px solid var(--border-hairline);animation-delay:.34s">
         <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="7→3" label="Clicks to purchase" size="{{ 40 }}" accent="{{ true }}" hint-size="100%,72px"></x-import>
         <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="30→7" unit="day" label="Login reward cycle" size="{{ 40 }}" hint-size="100%,72px"></x-import>
@@ -972,48 +991,46 @@
 
     <section style="display:flex;flex-direction:column;gap:var(--space-8)">
 
-      <article data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-6);align-items:center">
-        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Store refactor &amp; inventory rework</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Monetization had been a long-standing problem: buying an item took seven clicks, four more than players expect anywhere else. I streamlined the purchase, added real inventory sorting, sped up the back end, and made the line between <em>owned</em> and <em>buyable</em> legible at a glance.</p>
-          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">I prioritized the purchase path first, since every extra click there was lost revenue, and treated sorting and back-end speed as fixes that had to ride along rather than separate asks.</span></p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Buying an item took seven clicks. Most games take three. I streamlined the purchase, added real inventory sorting, sped up the back end, and made it easy to see what you already own and what you can buy.</p>
+          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">I prioritized the purchase path first, since every extra click there cost sales. Sorting and back-end speed went in the same update.</span></p>
           <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Shipped in the Siege: Beyond update.</p>
         </div>
-        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
-          <img src="https://static.wixstatic.com/media/5bd717_d9b421158c9b4f318378a44f3cceaf0b~mv2.png" alt="Paladins store refactor" loading="lazy" style="width:100%;display:block">
+        <div style="position:relative;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+          <video src="videos/paladins-store.mp4" data-crossfade="1" autoplay muted loop playsinline preload="metadata" aria-label="Paladins store refactor walkthrough" style="width:100%;display:block"></video>
         </div>
       </article>
 
-      <article data-stack="1" data-stack-reverse="1" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-6);align-items:center">
-        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
-          <img src="https://static.wixstatic.com/media/5bd717_7fb1626fd0a34e7db67f5da74e07f850~mv2.png" alt="Questing rework mockup" loading="lazy" style="width:100%;display:block">
-        </div>
-        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Questing rework</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">An over-bloated system, split across two places. I merged daily quests with the eight-week questing track into a single screen, which cut new-player confusion and gave designers a system that stopped adding tech debt every patch.</p>
-          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">Merging them meant giving up the two systems' separate screen real estate. I decided one coherent screen was worth losing that space.</span></p>
-          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">One screen for every quest a player owns.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Quests were split across two screens. I merged daily quests with the eight-week questing track into a single screen, which made it easier for new players to follow and easier for designers to maintain.</p>
+          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">Merging them meant less room for each system. One screen was easier to use, so I accepted that.</span></p>
+        </div>
+        <div style="position:relative;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
+          <video src="videos/paladins-quests.mp4" data-crossfade="1" autoplay muted loop playsinline preload="metadata" aria-label="Questing rework walkthrough" style="width:100%;display:block"></video>
         </div>
       </article>
 
-      <article data-stack="1" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-6);align-items:center">
-        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
-          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
+      <article style="display:flex;flex-direction:column;gap:var(--space-5)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">03</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Daily login modernization</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The old month-long calendar punished you for missing a day. The new model compresses the chase into seven days and lets you claim on your own schedule, so the reward still pulls without the guilt.</p>
-          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">Compressing thirty days into seven also meant a shorter chase and less total reward on the table. I decided the goodwill from removing the punishment was worth more than the length of the chase.</span></p>
-          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">No more penalty for missing a day.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The old login calendar ran 30 days, and missing a day set you back. I shortened it to seven days and let players claim on their own schedule, so they still have a reason to come back without being penalized.</p>
+          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">Seven days meant fewer total rewards. I decided removing the penalty mattered more to players.</span></p>
         </div>
-        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
+        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);background:var(--ink-900)">
           <img src="https://static.wixstatic.com/media/5bd717_d8e5daeaa9b64737a186561bd6ffad6b~mv2.png" alt="Daily login modernization" loading="lazy" style="width:100%;display:block">
         </div>
       </article>
 
       <article style="display:flex;flex-direction:column;gap:var(--space-5)">
         <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:70ch">
-          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">05</span>
+          <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Boutique champion UI</h2>
           <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Designed, implemented, and animated unique devices that track each champion's abilities. Engine restrictions meant no runtime animation, so every state was hand-animated as a PNG sequence.</p>
         </div>
@@ -1026,9 +1043,12 @@
 
     </section>
 
-    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+    <footer style="display:flex;flex-direction:column;gap:var(--space-5);padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
       <a href="https://store.steampowered.com/app/444090/Paladins/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Paladins on Steam ↗</a>
-      <a href="#/work/woz-magic-match" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Wizard of Oz →</a>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap">
+        <a href="#/work/smite-2" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">← Previous: Smite 2</a>
+        <a href="#/work/woz-magic-match" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Wizard of Oz →</a>
+      </div>
     </footer>
   </main>
   </sc-if>
@@ -1044,7 +1064,7 @@
         <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="accent" hint-size="110px,24px">System Designer</x-import>
       </div>
       <h1 class="hero-fade" style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95;animation-delay:.12s">Smite 2</h1>
-      <p class="hero-fade" style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:60ch;text-wrap:pretty;animation-delay:.22s">A third-person MOBA rebuilt in Unreal 5. Anything with a well-loved predecessor has to innovate without betraying the source, so the work was making systems clearer and more characterful at the same time.</p>
+      <p class="hero-fade" style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:60ch;text-wrap:pretty;animation-delay:.22s">A third-person MOBA rebuilt in Unreal 5. Smite has players who've been with it for ten years. My job was to make the UI clearer and give each god more personality, without moving things those players already knew.</p>
     </header>
 
     <section data-spec="1" style="display:grid;grid-template-columns:160px minmax(0,1fr);gap:var(--space-4) var(--space-6);max-width:82ch;padding-bottom:var(--space-7);margin-bottom:var(--space-7);border-bottom:1px solid var(--border-hairline)">
@@ -1072,11 +1092,11 @@
         <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Boutique character systems</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The original Smite had ability UI that was inconsistent from god to god and inefficient to read mid-fight. The rebuild had to make resource management unmistakable while pushing as much character-specific theming into it as the engine allowed.</p>
-          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">Where legibility and theming pulled against each other, I let legibility win. Theming had to fit inside a reading pattern that stayed the same god to god, never the reverse.</span></p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Jing Wei's device below is one system in its states: base, then each bird charge, then the VFX shape. The theming is doing real work here, because the resource it tracks is the thing the player is watching for.</p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">In play, where it has to work: the devices read at a glance in the corner of the screen, mid-fight, without pulling the eye off the god.</p>
-          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Distinct per god, consistent as a system.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The original Smite had ability UI that was inconsistent from god to god and inefficient to read mid-fight. The rebuild had to make resource management unmistakable and give each god as much of their own look as the engine could handle.</p>
+          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">When readability and theming conflicted, I chose readability. Every god's device is read the same way, and the theming fits around that.</span></p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Jing Wei's device below is one system in its states: base, then each bird charge, then the VFX shape. The theme is tied directly to the resource, so the art itself tells the player how many charges they have.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">In gameplay, the devices sit in the corner of the screen and can be read mid-fight without looking away from the god.</p>
+          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Each god looks different. They all read the same way.</p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-4)">
           <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_7aad20e355424455bf3efbfcaa4b1e2a~mv2.png" alt="Jing Wei ability device, base state" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block"></div>
@@ -1101,29 +1121,31 @@
         <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">An ability quick view, in gameplay</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">MOBAs lean hard on recency memory: you are expected to remember what every ability does, on a character you may have picked up ten minutes ago. That tax falls hardest on new players, and on anyone trying a god for the first time.</p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I designed an in-match quick view that puts a digestible version of each ability description one glance away, with animation and highlight states making locked, upgradable, and upgraded abilities readable without stopping to parse text.</p>
-          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:#dc2626">I scoped it to a digestible summary instead of the full tooltip text. A player reaching for it is mid-fight, and a wall of text they can't act on in that moment is worse than no lookup at all.</span></p>
-          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Less memory, more play.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">MOBAs expect you to remember what every ability does, even on a god you picked ten minutes ago. That's hardest on new players and anyone trying a god for the first time.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I designed an in-match quick view that shows a short version of each ability's description in the match, with animation and highlight states making locked, upgradable, and upgraded abilities readable without stopping to parse text.</p>
+          <p style="margin:0;line-height:var(--leading-body);text-wrap:pretty"><span style="color:var(--blue-500)">I kept it to a short summary because players usually open it mid-fight.</span></p>
         </div>
-        <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
-          <img src="https://static.wixstatic.com/media/5bd717_dd7543313fea42769378c35c14605faa~mv2.png" alt="In-game ability quick view" loading="lazy" style="width:100%;display:block">
+        <div style="position:relative;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
+          <video src="videos/smite-quick-view.mp4" data-clip-start="1" data-clip-end="12.8" data-crossfade="1" autoplay muted loop playsinline preload="metadata" aria-label="In-game ability quick view during a match" style="width:100%;display:block"></video>
+          <div aria-hidden="true" style="position:absolute;z-index:2;left:2.2%;top:13.4%;width:22.4%;height:2.6%;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);pointer-events:none"></div>
         </div>
       </article>
 
       <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:72ch">
-        <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
-        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Designing against a beloved predecessor</h2>
-        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">A sequel to a game people have played for a decade is a change-management problem as much as a design one. Every improvement is measured by returning players against the version living in their muscle memory.</p>
-        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">So the rule I worked to: fix what was genuinely inconsistent, keep what players already knew where to find, and spend the novelty budget on theming rather than on relocating things.</p>
-        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Innovate where it helps, stay familiar where it counts.</p>
+        <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">03</span>
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Redesigning a game people already love</h2>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Returning players judge every change against the version they already know by heart.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I fixed what was inconsistent, kept things where players already knew to find them, and put new ideas into theming instead of moving things around.</p>
       </article>
 
     </section>
 
-    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+    <footer style="display:flex;flex-direction:column;gap:var(--space-5);padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
       <a href="https://www.smite2.com/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">smite2.com ↗</a>
-      <a href="#/work/paladins" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Paladins →</a>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap">
+        <a href="#/work/crucible" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">← Previous: Crucible</a>
+        <a href="#/work/paladins" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Paladins →</a>
+      </div>
     </footer>
   </main>
   </sc-if>
@@ -1140,7 +1162,7 @@
         <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Badge" variant="outline" hint-size="130px,24px">2014 to 2019</x-import>
       </div>
       <h1 class="hero-fade" style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:clamp(34px,5.5vw,64px);line-height:.92;text-wrap:balance;max-width:14ch;animation-delay:.12s">Wizard of Oz<span style="opacity:.55">:</span> Magic Match</h1>
-      <p class="hero-fade" style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:62ch;text-wrap:pretty;animation-delay:.22s">A three-year-old match-3 title losing revenue every week, played mostly by women aged 45 to 60. Four programs over two years: two new features, a UI modernization that failed publicly before it worked, and an outsourcing pipeline built from nothing.</p>
+      <p class="hero-fade" style="margin:0;font-family:var(--font-medium);font-size:var(--text-lg);line-height:1.4;max-width:62ch;text-wrap:pretty;animation-delay:.22s">A three-year-old match-3 title losing revenue every week, played mostly by women aged 45 to 60. Four programs over two years: two new features, a UI update that we had to roll back before it worked, and an outsourcing process I set up from scratch.</p>
       <div class="hero-fade" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-5);padding-top:var(--space-4);border-top:1px solid var(--border-hairline);animation-delay:.34s">
         <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="6" unit="%" label="Card event" size="{{ 40 }}" accent="{{ true }}" hint-size="100%,72px"></x-import>
         <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.StatTile" value="5" unit="%" label="Retention feature" size="{{ 40 }}" hint-size="100%,72px"></x-import>
@@ -1169,8 +1191,8 @@
         <div style="display:flex;flex-direction:column;gap:var(--space-3)">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">01</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Daily retention, on the second attempt</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The team had already shipped a feature like this once and missed the target. Nobody had gone back to ask why. I did: message analytics and player conversations showed the instructions ran too long and read as work, and that players resented anything interrupting the core loop.</p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">So the rebuild stayed outside the loop and led with a character instead of a task list. On an aggressive deadline I cut the art cost to one pose and one face, changing costume and color per level, then carried that level color through the rest of the feature as a progress cue.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The team had already shipped a feature like this once and missed the target. I went back to find out why. Message analytics and player conversations showed the instructions were too long and felt like a chore, and that players resented anything interrupting the core loop.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">For the rebuild, I kept it outside the core loop and used a character to introduce it instead of a task list. On an aggressive deadline I cut the art cost to one pose and one face, changing costume and color per level, then carried that level color through the rest of the feature as a progress cue.</p>
           <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Up about 5% monetization and 3% logins within two weeks.</p>
         </div>
         <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default)">
@@ -1180,9 +1202,9 @@
 
       <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="32" hint-size="100%,220px">
         <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:74ch">
-          <span style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">A late requirement, solved without a flow hit</span>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">At final review, a stakeholder added a requirement that was not in the acceptance criteria and would not ship without it. It also broke the core flow, the one thing every piece of research said not to touch.</p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Rather than take the flow hit, I proposed an alternate ending animation that satisfied the request without adding a step. Our developer and I wireframed it the same day, got approval, and shipped on time. Afterward I added a flow-chart review with stakeholders to the process, so criteria stop appearing at the finish line.</p>
+          <span style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">Handling a late requirement</span>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">At final review, a stakeholder added a requirement that was not in the acceptance criteria and would not ship without it. It also broke the core flow, which our research said players didn't want changed.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Instead of adding a step, I proposed an alternate ending animation that satisfied the request without adding a step. Our developer and I wireframed it the same day, got approval, and shipped on time. Afterward I added a flow-chart review with stakeholders to the process, so new requirements came up earlier.</p>
         </div>
       </x-import>
 
@@ -1193,8 +1215,8 @@
         <div style="display:flex;flex-direction:column;gap:var(--space-3)">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">02</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">A card-collection event for an audience that hates complexity</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Stakeholders wanted a genuinely new kind of experience inside a game whose players were 82% women, most of them between 45 and 60. Card collection is a mechanic built by and for a very different audience, so the risk was obvious.</p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I audited the established players in that space, Elder Scrolls: Legends and Shards of Infinity among them, and played them daily for a week keeping my own notes so the wireframes argued from evidence. Post-its to whiteboard to flow chart to graybox, then art swapped in screen by screen.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Stakeholders wanted a new kind of experience inside a game whose players were 82% women, most of them between 45 and 60. Card collection is a mechanic built by and for a very different audience.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I audited the established players in that space, Elder Scrolls: Legends and Shards of Infinity among them, and played them daily for a week keeping my own notes so the wireframes were based on what I'd seen work. Post-its to whiteboard to flow chart to graybox, then art swapped in screen by screen.</p>
           <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Internal testing across teams outside QA said the instructions still confused people. I added an FTUE screen explaining duplicate cards, upsized assets, and animated every tappable element.</p>
           <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">About 6% monetization lift over the first limited run.</p>
         </div>
@@ -1203,11 +1225,10 @@
       <article style="display:flex;flex-direction:column;gap:var(--space-5)">
         <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:74ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">04</span>
-          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">The modernization that had to fail first</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Year three, revenue sliding about 0.03% a week, and years of added features had left visual clutter that buried anything new. I stripped the decorative characters, moved the header up to read as progression, simplified copy, raised contrast, and deliberately left monetization exactly where players' thumbs already knew to find it.</p>
+          <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Modernizing the UI</h2>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Year three, revenue sliding about 0.03% a week, and years of added features had made the screens cluttered and new features hard to notice. I stripped the decorative characters, moved the header up to read as progression, simplified copy, raised contrast, and left the store buttons where players were used to finding them.</p>
           <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">We launched it. Sales dropped. We reverted inside days and sales recovered, and the interviews explained why: players liked the new UI. They just did not want <em>their</em> screens changed.</p>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">That reframed the whole problem from visual design to change management. New strategy: every new feature ships in the modern style, while existing core screens change only in small increments as players acclimate. The first feature built that way lifted daily users about 0.06% and monetization about 1.2%, and the core screens went onto a five-part roadmap across the following year.</p>
-          <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">The redesign was right. The rollout was wrong, and that was mine to fix.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">The problem wasn't the design. Players needed changes to happen gradually. So every new feature shipped in the modern style, while existing core screens changed only in small increments as players acclimate. The first feature built that way lifted daily users about 0.06% and monetization about 1.2%, and the core screens went onto a five-part roadmap across the following year.</p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-4)">
           <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:9/16;background:var(--ink-900)"><img src="https://static.wixstatic.com/media/5bd717_ed19b893d7d84695a11b15165e487ecc~mv2.jpg" alt="Original UI before the pass" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
@@ -1218,30 +1239,30 @@
 
       <article style="display:flex;flex-direction:column;gap:var(--space-3);max-width:74ch">
         <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">05</span>
-        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Buying the team more hours</h2>
+        <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Outsourcing level content</h2>
         <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Two designers, two artists, three developers, new level content due every two weeks, and no documented process for any of it. I wrote the RFPs and ran the outsourcing myself.</p>
-        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I trialed two vendors against the same brief to see which asked questions when confused, built documentation that paired visuals with written instruction, and shipped a library of blank templates pre-set to the right ratios and guides so deliverables came back correct by default. Then a standing check-in cadence: they send progress, I send feedback, nobody discovers a problem at delivery.</p>
+        <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">I trialed two vendors against the same brief to see which asked questions when confused, built documentation that paired visuals with written instruction, and shipped a library of blank templates pre-set to the right ratios and guides so files came back set up correctly. We also had regular check-ins where they sent progress and I sent feedback, so problems were caught early.</p>
         <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Every miscommunication went back into the documentation. It ended up doubling as onboarding material for new hires.</p>
-        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Three weeks, six check-ins, content shipping without the internal team touching it.</p>
+        <p style="margin:0;font-family:var(--font-medium);color:var(--text-primary)">Within three weeks and six check-ins, the vendor was delivering finished content without help from the internal team.</p>
       </article>
 
       <article style="display:flex;flex-direction:column;gap:var(--space-5)">
         <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:74ch">
           <span style="font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:1;color:var(--blue-500)">06</span>
           <h2 style="margin:0;font-family:var(--font-medium);font-size:var(--text-xl);line-height:1.2">Also at Zynga: Wizard of Oz and Willy Wonka Slots</h2>
-          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Alongside Magic Match I worked the studio's slots titles, the work that helped revive Zynga's Austin office.</p>
+          <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body);text-wrap:pretty">Alongside Magic Match I worked the studio's slots titles, which helped bring Zynga's Austin office back.</p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-5)">
           <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
             <div style="display:flex;flex-direction:column;gap:var(--space-3)">
               <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">Brand compliance</h3>
-              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Designed within licensor guidelines for two well-known IPs, clearing art and UI through client review without losing the game's own voice.</p>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Designed within licensor guidelines for two well-known IPs, clearing art and UI through client review.</p>
             </div>
           </x-import>
           <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
             <div style="display:flex;flex-direction:column;gap:var(--space-3)">
               <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md)">VIP program</h3>
-              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Worked the highest-value player experience, the tier where design decisions move revenue directly.</p>
+              <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Worked on the experience for the highest-value players.</p>
             </div>
           </x-import>
           <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
@@ -1250,59 +1271,88 @@
               <p style="margin:0;color:var(--text-secondary);line-height:var(--leading-body)">Developed saleable concepts early enough to shape what got greenlit.</p>
             </div>
           </x-import>
+          <!-- Hidden placeholders, restore when write-ups are ready:
           <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
             <div style="display:flex;flex-direction:column;gap:var(--space-3)">
-              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md);color:#dc2626">PLACEHOLDER: VIP program</h3>
-              <p style="margin:0;color:#dc2626;line-height:var(--leading-body)">Set up the original tier levels and how the VIP UI communicated status. No surviving images from that era, write-up TBD.</p>
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md);color:var(--blue-500)">PLACEHOLDER: VIP program</h3>
+              <p style="margin:0;color:var(--blue-500);line-height:var(--leading-body)">Set up the original tier levels and how the VIP UI communicated status. No surviving images from that era, write-up TBD.</p>
             </div>
           </x-import>
           <x-import component-from-global-scope="CrucibleDesignSystem_d53f36.Card" variant="plain" padding="28" hint-size="100%,180px">
             <div style="display:flex;flex-direction:column;gap:var(--space-3)">
-              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md);color:#dc2626">PLACEHOLDER: Web portal foundation</h3>
-              <p style="margin:0;color:#dc2626;line-height:var(--leading-body)">Laid the foundation for a web portal, built out afterward by others. Scope and write-up TBD.</p>
+              <h3 style="margin:0;font-family:var(--font-medium);font-size:var(--text-md);color:var(--blue-500)">PLACEHOLDER: Web portal foundation</h3>
+              <p style="margin:0;color:var(--blue-500);line-height:var(--leading-body)">Laid the foundation for a web portal, built out afterward by others. Scope and write-up TBD.</p>
             </div>
           </x-import>
+          -->
         </div>
       </article>
 
     </section>
-    <footer style="display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
+    <footer style="display:flex;flex-direction:column;gap:var(--space-5);padding:var(--space-8) 0 0;margin-top:var(--space-7);border-top:1px solid var(--border-hairline)">
       <a href="https://www.zynga.com/games/wizard-of-oz-magic-match/" target="_blank" rel="noopener" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Wizard of Oz: Magic Match ↗</a>
-      <a href="#/ui-design" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: UI Design →</a>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap">
+        <a href="#/work/paladins" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">← Previous: Paladins</a>
+        <a href="#/ui-design" style="font-size:14px;color:var(--blue-500);font-family:var(--font-medium);text-decoration:none">Next: Visual Design →</a>
+      </div>
     </footer>
   </main>
   </sc-if>
 
   <sc-if value="{{ isUi }}">
   <main style="max-width:1140px;margin:0 auto;padding:var(--space-8) var(--space-6)">
-    <header style="display:flex;flex-direction:column;gap:var(--space-4);padding-bottom:var(--space-7)">
-      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95">UI Design</h1>
-      <p style="margin:0;font-size:var(--text-md);color:var(--text-secondary);max-width:60ch;text-wrap:pretty">Graphics, icons, and hand-animated sequences made alongside the UX work. Click any image to open it full size.</p>
+    <header style="display:flex;flex-direction:column;gap:var(--space-4);padding-bottom:var(--space-5)">
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.95">Visual Design</h1>
     </header>
 
     <section style="padding-bottom:var(--space-8)">
       <h2 style="margin:0 0 var(--space-5);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">Graphics</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-4)">
         <sc-for list="{{ graphics }}" as="g" hint-placeholder-count="12">
-          <a href="{{ g }}" target="_blank" rel="noopener" style="display:block;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:4/3;background:var(--ink-900)">
-            <img src="{{ g }}" alt="UI graphic" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" style-hover="opacity:.86">
+          <a href="{{ g.src }}" onClick="{{ g.open }}" style="display:block;cursor:zoom-in;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:4/3;background:var(--ink-900)">
+            <img src="{{ g.src }}" alt="UI graphic" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" style-hover="opacity:.86">
           </a>
         </sc-for>
       </div>
     </section>
 
     <section>
-      <h2 style="margin:0 0 var(--space-5);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">Animation</h2>
-      <p style="margin:0 0 var(--space-5);color:var(--text-secondary);max-width:60ch">Ability-tracking devices for Paladins champions, hand-animated as PNG sequences because the engine allowed nothing else.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:var(--space-4)">
-        <sc-for list="{{ animations }}" as="a" hint-placeholder-count="5">
-          <a href="{{ a }}" target="_blank" rel="noopener" style="display:block;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)">
-            <img src="{{ a }}" alt="Animated UI device" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" style-hover="opacity:.86">
+      <h2 style="margin:0 0 var(--space-5);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)">In-game animations and VFX</h2>
+      <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="display:flex;flex-wrap:wrap;gap:var(--space-4)">
+        <sc-for list="{{ animWide }}" as="w" hint-placeholder-count="2">
+          <a data-animwide="1" href="{{ w.src }}" onClick="{{ w.open }}" style="display:block;flex:none;height:200px;max-width:100%;cursor:zoom-in;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:8/3;background:var(--ink-900)">
+            <video src="{{ w.video }}" poster="{{ w.poster }}" autoplay muted loop playsinline preload="metadata" aria-label="Animated UI device" style="width:100%;height:100%;object-fit:contain;display:block"></video>
           </a>
         </sc-for>
       </div>
+      <div data-animrow="1" style="display:flex;flex-wrap:wrap;gap:var(--space-4) calc(3 * var(--space-4));padding-inline:max(0px, calc((100% - 606px - 6 * var(--space-4)) / 2))">
+        <sc-for list="{{ animSquare }}" as="s" hint-placeholder-count="3">
+          <a data-animsq="1" href="{{ s.src }}" onClick="{{ s.open }}" style="display:block;flex:none;height:200px;cursor:zoom-in;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-default);aspect-ratio:1;background:var(--ink-900)">
+            <video src="{{ s.video }}" poster="{{ s.poster }}" autoplay muted loop playsinline preload="metadata" aria-label="Animated UI device" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+          </a>
+        </sc-for>
+      </div>
+      </div>
     </section>
   </main>
+  </sc-if>
+
+  <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ lbClose }}" onTouchStart="{{ lbTouchStart }}" onTouchEnd="{{ lbTouchEnd }}" role="dialog" aria-modal="true" aria-label="Image viewer" style="position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;gap:var(--space-4);padding:var(--space-6);background:rgba(8,10,12,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)">
+      <button data-lb-arrow="prev" onClick="{{ lbPrev }}" aria-label="Previous piece" style="width:56px;height:96px;flex:none;border:0;border-radius:var(--radius-md);background:transparent;color:var(--blue-500);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .15s ease, background .15s ease" style-hover="color:var(--blue-450);background:var(--blue-tint-12)"><svg width="22" height="40" viewBox="0 0 22 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 4 L5 20 L17 36"></path></svg></button>
+      <div data-lb-frame="1" onClick="{{ lbStop }}" style="width:min(1200px,calc(100vw - 200px));height:calc(100vh - 120px);display:flex;align-items:center;justify-content:center">
+        <sc-for list="{{ lbVideos }}" as="it" hint-placeholder-count="0">
+          <video ref="{{ it.ref }}" autoplay muted loop playsinline aria-label="Enlarged animation" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:var(--radius-md);box-shadow:0 24px 80px rgba(0,0,0,.5);display:block"></video>
+        </sc-for>
+        <sc-for list="{{ lbImages }}" as="it" hint-placeholder-count="0">
+          <img ref="{{ it.ref }}" alt="Enlarged graphic" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:var(--radius-md);box-shadow:0 24px 80px rgba(0,0,0,.5);display:block">
+        </sc-for>
+      </div>
+      <button data-lb-arrow="next" onClick="{{ lbNext }}" aria-label="Next piece" style="width:56px;height:96px;flex:none;border:0;border-radius:var(--radius-md);background:transparent;color:var(--blue-500);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .15s ease, background .15s ease" style-hover="color:var(--blue-450);background:var(--blue-tint-12)"><svg width="22" height="40" viewBox="0 0 22 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4 L17 20 L5 36"></path></svg></button>
+      <button onClick="{{ lbClose }}" aria-label="Close" style="position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:999px;border:1px solid var(--blue-500);background:rgba(13,13,13,.55);color:var(--blue-500);font-size:20px;line-height:1;cursor:pointer" style-hover="background:var(--blue-tint-12);color:var(--blue-450);border-color:var(--blue-450)">✕</button>
+      <span style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:13px;letter-spacing:.06em;color:#fff;background:rgba(13,13,13,.55);padding:6px 12px;border-radius:999px">{{ lbCount }}</span>
+    </div>
   </sc-if>
 
   <sc-if value="{{ isResume }}">
@@ -1391,11 +1441,8 @@
       <div style="display:flex;gap:var(--space-5);flex-wrap:wrap">
         <a href="#/" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Work</a>
         <a href="#/bio" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Bio</a>
-        <!-- Hidden for now, not deleted. The #/ui-design route and blog.html both still work;
-             paste these two links back into the footer to bring them into the site.
-        <a href="#/ui-design" style="font-size:14px;color:var(--text-secondary);text-decoration:none">UI Design</a>
-        <a href="blog.html" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Blog</a>
-        -->
+        <a href="#/ui-design" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Visual Design</a>
+        <!-- Blog hidden for now: <a href="blog.html" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Blog</a> -->
         <a href="#/resume" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Resume</a>
         <a href="mailto:kamseidl@gmail.com" style="font-size:14px;color:var(--text-secondary);text-decoration:none">Contact</a>
       </div>
@@ -1427,31 +1474,40 @@
     &quot;section&quot;: &quot;Feel&quot;
   }
 }">
+// Replaced: "images/graphics/paladins-talent-icons.jpg"
 const GRAPHICS = [
   "5bd717_5ad1360e45f747229b02b9ec63d9b6f2~mv2.jpg",
   "5bd717_c8734bc52a434e95a4deeb647167ef0f~mv2.jpg",
+  "images/graphics/paladins-lilith-betty-talents.png",
+  "images/graphics/paladins-avatars.jpg",
+  "5bd717_d0cd4aec098f4259ba0cbc9f836b4d8b~mv2.png",
+  "5bd717_f21a5a12e88740bfa8add55979decdd6~mv2.png",
   "5bd717_d3089bf218a74f20b935d19183b6932b~mv2.jpg",
+  "5bd717_bd96c99b74104662b97d59073015dc41~mv2.png",
+  "5bd717_eb0684f9bd584fd58efa9646cc1b5b68~mv2.png",
   "5bd717_97ebb09e88c0490b804f7bc915ed5efb~mv2.jpg",
   "5bd717_e4695396c4164bc0ad1827c9fa673e67~mv2.jpg",
   "5bd717_69759304e50d4b10a27f96d812486a68~mv2.jpg",
   "5bd717_9c88935aaab44ac6a04a8c15f2ecb879~mv2.jpg",
   "5bd717_6278fd16a1b341f2907a50bac313732b~mv2.jpg",
-  "5bd717_c4dedb8593f74e30877966814182e916~mv2.jpg",
-  "5bd717_d0cd4aec098f4259ba0cbc9f836b4d8b~mv2.png",
-  "5bd717_f21a5a12e88740bfa8add55979decdd6~mv2.png",
-  "5bd717_bd96c99b74104662b97d59073015dc41~mv2.png",
-  "5bd717_cd7f5e84fa44435cab18ce2eb2bb5db8~mv2.png",
-  "5bd717_eb0684f9bd584fd58efa9646cc1b5b68~mv2.png",
   "5bd717_83d9cdca25854c8eacb2241b9d447f94~mv2.png"
-].map(f => "https://static.wixstatic.com/media/" + f);
+  // hidden: "5bd717_cd7f5e84fa44435cab18ce2eb2bb5db8~mv2.png" (Munchkin Prize Parade ad)
+  // hidden: "5bd717_dd7543313fea42769378c35c14605faa~mv2.png" (Smite 2 ability quick view)
+].map(f => f.startsWith("images/") ? f : "https://static.wixstatic.com/media/" + f);
 
+// First two entries are the wide Smite clips (shown full width); the rest are square tiles.
+// Hidden for now: "5bd717_9907da71467948a5a1fc369e2c74868ef000.jpg", "5bd717_e600712ca8b14c0291880a199cbd1701f000.jpg"
+const ANIM_WIDE = 2;
 const ANIMATIONS = [
-  "5bd717_9907da71467948a5a1fc369e2c74868ef000.jpg",
-  "5bd717_e600712ca8b14c0291880a199cbd1701f000.jpg",
+  "videos/smite-solution.mp4",
+  "videos/smite-nuwa.mp4",
   "5bd717_1ae84bbb108b40fd807a18080a4b4d95f000.jpg",
   "5bd717_3e7495e8ab314b1eb7a73b9fca11020ef000.jpg",
   "5bd717_8a3dbce700f540b5b2d0662659d52b52f000.jpg"
-].map(f => "https://static.wixstatic.com/media/" + f);
+].map(f => f.startsWith("videos/") ? f : "https://static.wixstatic.com/media/" + f);
+// Wix video poster frames end in f000.jpg; the clip itself lives on video.wixstatic.com under the same id.
+const animPoster = (src) => src.endsWith(".mp4") ? "" : src;
+const animVideo = (poster) => poster.endsWith(".mp4") ? poster : "https://video.wixstatic.com/video/" + poster.split("/").pop().replace(/f000\.jpg$/, "") + "/360p/mp4/file.mp4";
 
 const OI_SLIDES = [
   { src: "images/crucible/offensive-info-vocabulary.png", alt: "Offensive Info vocabulary screen with term sets and learn or test toggles", caption: "Vocabulary. Each category carries its own sets and its own choice of learn or test; multi-select combines sets into one lesson." },
@@ -1482,13 +1538,40 @@ class Component extends DCLogic {
   state = {
     vcsSlide: 0,
     oiSlide: 0,
-    route: (typeof location !== "undefined" ? location.hash.replace(/^#/, "") : "") || "/",
+    lb: -1,
+    lbList: [],
+    route: (typeof location !== "undefined" ? location.hash.replace(/^#/, "") : "") || (() => { try { const s = JSON.parse(localStorage.getItem("kam-route") || "null"); return s && Date.now() - s.t < 600000 ? s.r : null; } catch (e) { return null; } })() || "/",
     theme: "dark",
     open: {},
     tick: 0
   };
 
   componentDidMount() {
+    this._onLbKey = (e) => {
+      if (this.state.lb < 0) return;
+      if (e.key === "Escape") this.closeLb();
+      else if (e.key === "ArrowRight") this.stepLb(1);
+      else if (e.key === "ArrowLeft") this.stepLb(-1);
+    };
+    window.addEventListener("keydown", this._onLbKey);
+    const zoomable = (img) => img.closest("main") && !img.closest("a, button, [role=dialog]") && img.getBoundingClientRect().width >= 120;
+    const onWork = () => this.state.route.indexOf("/work/") === 0;
+    this._onImgClick = (e) => {
+      if (!onWork() || this.state.lb >= 0) return;
+      let img = e.target.closest && e.target.closest("img");
+      if (!img || !zoomable(img)) return;
+      // Stacked carousels: the top img in the DOM gets the click even when faded out, so use the visible one.
+      const stack = [...img.parentElement.querySelectorAll(":scope > img")];
+      if (stack.length > 1) img = stack.find(x => parseFloat(getComputedStyle(x).opacity) > 0.5) || img;
+      const all = [...document.querySelectorAll("main img")].filter(zoomable);
+      const list = all.map(x => ({ src: x.currentSrc || x.src }));
+      this.openLb(Math.max(0, all.indexOf(img)), list);
+    };
+    document.addEventListener("click", this._onImgClick);
+    this._tagZoom = () => {
+      if (!onWork()) return;
+      document.querySelectorAll("main img").forEach(img => { if (!img.closest("a, button, [role=dialog]")) img.style.cursor = "zoom-in"; });
+    };
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) {
@@ -1496,9 +1579,10 @@ class Component extends DCLogic {
           revealObserver.unobserve(e.target);
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0 });
     const tagAndObserve = (el) => {
-      if (el.dataset.revealed) return;
+      // Re-renders can drop the class without clearing the flag, which left headings stuck clipped; re-observe those.
+      if (el.dataset.revealed && el.classList.contains("is-in")) return;
       el.dataset.revealed = "1";
       el.classList.add("reveal-clip");
       revealObserver.observe(el);
@@ -1506,15 +1590,22 @@ class Component extends DCLogic {
     document.querySelectorAll("main h2").forEach(tagAndObserve);
     const revealMo = new MutationObserver(() => {
       document.querySelectorAll("main h2").forEach(tagAndObserve);
+      this._tagZoom();
     });
     revealMo.observe(document.body, { childList: true, subtree: true });
     this._revealObserver = revealObserver;
     this._revealMo = revealMo;
     this._onHash = () => {
-      this.setState({ route: location.hash.replace(/^#/, "") || "/" });
+      const route = location.hash.replace(/^#/, "") || "/";
+      // An empty hash comes from the page being reloaded/reset, not from a nav click (those use "#/"), so don't remember it.
+      if (location.hash) { try { localStorage.setItem("kam-route", JSON.stringify({ r: route, t: Date.now() })); } catch (e) {} }
+      this.setState({ route });
       if (typeof window !== "undefined") window.scrollTo(0, 0);
     };
     window.addEventListener("hashchange", this._onHash);
+    try { localStorage.setItem("kam-route", JSON.stringify({ r: this.state.route, t: Date.now() })); } catch (e) {}
+    this._routeBeat = setInterval(() => { try { localStorage.setItem("kam-route", JSON.stringify({ r: this.state.route, t: Date.now() })); } catch (e) {} }, 60000);
+    if (!location.hash && this.state.route !== "/") history.replaceState(null, "", "#" + this.state.route);
     let theme = "dark";
     try { theme = localStorage.getItem("kam-theme") || "dark"; } catch (e) {}
     this.applyTheme(theme);
@@ -1554,8 +1645,12 @@ class Component extends DCLogic {
   }
 
   componentWillUnmount() {
+    window.removeEventListener("keydown", this._onLbKey);
+    document.removeEventListener("click", this._onImgClick);
+    document.body.style.overflow = "";
     if (this._slideTimer) clearInterval(this._slideTimer);
     window.removeEventListener("hashchange", this._onHash);
+    clearInterval(this._routeBeat);
     if (this._poll) clearInterval(this._poll);
   }
 
@@ -1584,18 +1679,42 @@ class Component extends DCLogic {
       const a = parseFloat(v.dataset.clipStart);
       const b = parseFloat(v.dataset.clipEnd);
       const clipped = !isNaN(a) && !isNaN(b) && b > a;
-      v.loop = !clipped;
+      v.loop = !clipped && v.dataset.crossfade !== "1";
+      // Crossfade loops are driven manually; if playback still reaches the end, restart it.
+      if (v.dataset.crossfade === "1" && !v._endBound) { v._endBound = true; v.addEventListener("ended", () => { v.currentTime = clipped ? a : 0; v.play().catch(() => {}); }); }
 
       if (!v._clipBound) {
         v._clipBound = true;
         const FADE = 0.4;
-        v.style.transition = "opacity " + FADE + "s ease";
+        if (v.dataset.crossfade !== "1") v.style.transition = "opacity " + FADE + "s ease";
         const end = () => (clipped ? b : (v.duration || 0));
         const start = () => (clipped ? a : 0);
 
+        // data-crossfade: freeze the last frame on a canvas over the video, jump to the start, then dissolve the canvas away.
+        const xfade = v.dataset.crossfade === "1";
+        const XF = 0.6;
+        let cv = null;
+        if (xfade) {
+          cv = document.createElement("canvas");
+          cv.style.cssText = "position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0;transition:none";
+          v.parentElement.appendChild(cv);
+        }
         v.addEventListener("timeupdate", () => {
           const t = v.currentTime, e = end();
           if (!e) return;
+          if (xfade) {
+            if (t >= e - 0.15 && !v._xf) {
+              v._xf = true;
+              cv.width = v.videoWidth; cv.height = v.videoHeight;
+              try { cv.getContext("2d").drawImage(v, 0, 0); } catch (err) {}
+              cv.style.transition = "none"; cv.style.opacity = "1";
+              v.currentTime = start();
+              v.addEventListener("seeked", () => {
+                requestAnimationFrame(() => { cv.style.transition = "opacity " + XF + "s ease"; cv.style.opacity = "0"; v._xf = false; });
+              }, { once: true });
+            }
+            return;
+          }
           if (t >= e - FADE && !v._fading) { v._fading = true; v.style.opacity = "0"; }
           if (clipped && (t >= e || t < start() - 0.1)) v.currentTime = start();
         });
@@ -1663,6 +1782,16 @@ class Component extends DCLogic {
     this.setState({ theme });
   };
 
+  openLb(i, list) {
+    document.body.style.overflow = "hidden";
+    if (!list) list = GRAPHICS.map(src => ({ src })).concat(ANIMATIONS.map(src => ({ video: animVideo(src), poster: animPoster(src) })));
+    this.setState({ lb: i, lbList: list });
+  }
+  closeLb = () => { document.body.style.overflow = ""; this.setState({ lb: -1 }); };
+  stepLb(d) {
+    this.setState(s => { const n = s.lbList.length || 1; return { lb: (s.lb + d + n) % n }; });
+  }
+
   toggle(i) {
     this.setState(s => ({ open: Object.assign({}, s.open, { [i]: !s.open[i] }) }));
   }
@@ -1672,6 +1801,7 @@ class Component extends DCLogic {
     const r = window.KAM_RESUME || { links: [], stats: [], experience: [], skillGroups: [], education: [] };
     const known = ["/bio", "/ui-design", "/resume", "/work/crucible", "/work/vcs", "/work/paladins", "/work/smite-2", "/work/woz-magic-match"];
     const isHome = !known.includes(route);
+    const anims = ANIMATIONS.map((src, i) => ({ src, poster: animPoster(src), video: animVideo(src), open: (e) => { e.preventDefault(); this.openLb(GRAPHICS.length + i); } }));
 
     return {
       year: new Date().getFullYear(),
@@ -1724,8 +1854,22 @@ class Component extends DCLogic {
       oiPrev: () => this.goOiSlide(this.state.oiSlide - 1, true),
       oiNext: () => this.goOiSlide(this.state.oiSlide + 1, true),
 
-      graphics: GRAPHICS,
-      animations: ANIMATIONS,
+      graphics: GRAPHICS.map((src, i) => ({ src, open: (e) => { e.preventDefault(); this.openLb(i); } })),
+      animWide: anims.slice(0, ANIM_WIDE),
+      animSquare: anims.slice(ANIM_WIDE),
+      lbOpen: this.state.lb >= 0,
+      lbVideos: (() => { const it = this.state.lb >= 0 && this.state.lbList[this.state.lb]; if (!it || !it.video) return []; return [{ ref: (el) => { if (!el) return; if (it.poster) el.poster = it.poster; if (el.getAttribute("src") !== it.video) el.src = it.video; } }]; })(),
+      lbImages: (() => { const it = this.state.lb >= 0 && this.state.lbList[this.state.lb]; if (!it || it.video) return []; return [{ ref: (el) => { if (el && el.getAttribute("src") !== it.src) el.src = it.src; } }]; })(),
+      lbCount: (this.state.lb + 1) + " / " + this.state.lbList.length,
+      lbClose: this.closeLb,
+      lbPrev: (e) => { e.stopPropagation(); this.stepLb(-1); },
+      lbNext: (e) => { e.stopPropagation(); this.stepLb(1); },
+      lbStop: (e) => e.stopPropagation(),
+      lbTouchStart: (e) => { const t = e.touches[0]; this._tx = t.clientX; this._ty = t.clientY; },
+      lbTouchEnd: (e) => {
+        const t = e.changedTouches[0], dx = t.clientX - (this._tx || 0), dy = t.clientY - (this._ty || 0);
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) { e.preventDefault(); this.stepLb(dx < 0 ? 1 : -1); }
+      },
 
       r,
       mailtoHref: "mailto:" + (r.email || ""),
